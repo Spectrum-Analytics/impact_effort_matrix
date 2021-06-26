@@ -30,18 +30,39 @@
         <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h1>Verify Account</h1>
+                    <h1>Add Employees</h1>
                     <form style="border-radius: 2;color: rgb(33, 37, 41);border: 2px solid rgb(66,113,234) ;border-top-width: 2px;">
-                        <div class="form-group text-left"><label class="text-left" for="name" style="text-align: left;">Verification Code</label>
-                            <div id="name" class="inputs d-flex flex-row justify-content-center mt-2"> <input class="m-2 text-center form-control rounded" type="text" id="input1" v-on:keyup="inputenter(1)" maxlength="1" /> <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(2)" type="text" id="input2" maxlength="1" /> <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(3)" type="text" id="input3" maxlength="1" /> <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(4)" type="text" id="input4" maxlength="1" /> </div>
-                            <a class="btn btn-primary btn-block border rounded-pill" role="button" href="addEmployees.html" style="background: rgb(66,113,234);">Verify</a>
-                        <div>
-                            <p class="text-left" style="font-size: 13px;">Didn't receive verification code ?&nbsp;<a class="text-left forgot" style="text-align: left;" href="#">send again</a></p>
+                        <div class="form-group text-left">
+                            <label class="text-left" for="emails" style="text-align: left;">Employee Emails</label>
+                            <textarea class="form-control" id="emails" rows="3"></textarea>
                         </div>
+                        <button type="button" class="btn btn-secondary rounded-pill"style="width:120px;">Skip</button>
+                        <a class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#exampleModalCenter" role="button" href="#feedback" style="background: rgb(66,113,234);">Complete</a>
                     </form>
                 </div>
             </div>
         </section>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Setup Complete</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Proceed to your homepage
+        </div>
+        <div class="modal-footer">
+          <a href="index.html"><button type="button" class="btn btn-primary rounded-pill" style="background: rgb(66,113,234);">Proceed</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
     </main>
     <footer class="page-footer dark" style="background: rgb(66,113,234);height: 100px;">
         <div class="footer-copyright" style="background: rgb(66,113,234);border-style: none;">
