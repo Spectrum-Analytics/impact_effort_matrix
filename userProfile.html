@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
     <link rel="stylesheet" href="assets/css/profile_style.css">
 </head>
@@ -21,7 +20,6 @@
         <nav aria-label="breadcrumb" class="main-breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
             <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
           </ol>
         </nav>
@@ -74,8 +72,8 @@
                       <label for="url">Email</label>
                       <input type="email" class="form-control" id="email" placeholder="@gmail.com" value="">
                     </div>
-                    <button type="button" class="btn btn-primary">Update Profile</button>
-                    <button type="reset" class="btn btn-light">Reset Changes</button>
+                    <button type="button" class="btn btn-primary rounded-pill" style="background: rgb(25,28,147);">Update Profile</button>
+                    <button type="reset" class="btn btn-light rounded-pill">Reset Changes</button>
                   </form>
                 </div>
                 <div class="tab-pane" id="account">
@@ -92,7 +90,7 @@
                       <label class="d-block text-danger">Delete Account</label>
                       <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please be certain.</p>
                     </div>
-                    <button class="btn btn-danger" type="button">Delete Account</button>
+                    <button class="btn btn-danger rounded-pill" type="button">Delete Account</button>
                   </form>
                 </div>
                 <div class="tab-pane" id="security">
@@ -104,22 +102,8 @@
                       <input type="text" class="form-control" placeholder="Enter your old password">
                       <input type="text" class="form-control mt-1" placeholder="New password">
                       <input type="text" class="form-control mt-1" placeholder="Confirm new password">
-                    </div>
-                  </form>
-                  <hr>
-                  <form>
-                    <div class="form-group mb-0">
-                      <label class="d-block">Sessions</label>
-                      <p class="font-size-sm text-secondary">This is a list of devices that have logged into your account. Revoke any sessions that you do not recognize.</p>
-                      <ul class="list-group list-group-sm">
-                        <li class="list-group-item has-icon">
-                          <div>
-                            <h6 class="mb-0">Gaborone west</h6>
-                            <small class="text-muted">Your current session seen in Botswana</small>
-                          </div>
-                          <button class="btn btn-light btn-sm ml-auto" type="button">More info</button>
-                        </li>
-                      </ul>
+                      <hr>
+                      <button type="button" class="btn btn-primary rounded-pill" style="background: rgb(25,28,147);">Update</button>
                     </div>
                   </form>
                 </div>

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
     <link rel="stylesheet" href="assets/css/smoothproducts.css">
 </head>
 
@@ -33,8 +32,13 @@
                     <h1>Verify Account</h1>
                     <form style="border-radius: 2;color: rgb(33, 37, 41);border: 2px solid rgb(66,113,234) ;border-top-width: 2px;">
                         <div class="form-group text-left"><label class="text-left" for="name" style="text-align: left;">Verification Code</label>
-                            <div id="name" class="inputs d-flex flex-row justify-content-center mt-2"> <input class="m-2 text-center form-control rounded" type="text" id="input1" v-on:keyup="inputenter(1)" maxlength="1" /> <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(2)" type="text" id="input2" maxlength="1" /> <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(3)" type="text" id="input3" maxlength="1" /> <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(4)" type="text" id="input4" maxlength="1" /> </div>
-                            <a class="btn btn-primary btn-block border rounded-pill" role="button" href="addEmployees.html" style="background: rgb(66,113,234);">Verify</a>
+                            <div id="name" class="inputs d-flex flex-row justify-content-center mt-2"> 
+                                <input class="m-2 text-center form-control rounded" type="text" id="input1" v-on:keyup="inputenter(1)" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
+                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(2)" type="text" id="input2" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
+                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(3)" type="text" id="input3" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
+                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(4)" type="text" id="input4" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
+                            </div>
+                            <a class="btn btn-primary btn-block border rounded-pill" role="button" href="addEmployees.html" style="background: rgb(25,28,147);">Verify</a>
                         <div>
                             <p class="text-left" style="font-size: 13px;">Didn't receive verification code ?&nbsp;<a class="text-left forgot" style="text-align: left;" href="#">send again</a></p>
                         </div>
@@ -43,8 +47,8 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer dark" style="background: rgb(66,113,234);height: 100px;">
-        <div class="footer-copyright" style="background: rgb(66,113,234);border-style: none;">
+    <footer class="page-footer dark" style="background: rgb(1, 3, 81);height: 100px;">
+        <div class="footer-copyright" style="background: rgb(1, 3, 81);border-style: none;">
             <p>© 2021 Copyright Text</p>
         </div>
     </footer>
