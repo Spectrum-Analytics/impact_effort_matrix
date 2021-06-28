@@ -1,0 +1,55 @@
+.quads{
+    height: 90vh;
+    background-color: white;
+    border: 2px solid rgb(94, 119, 167);
+    border-radius: 20px;
+}
+
+.features{
+    background-color: rgb(255, 255, 255);
+    height: 90vh;
+    border: 2px solid rgb(94, 119, 167);
+    border-radius: 20px;
+}
+
+.quad-1{
+    background-color: cornflowerblue;
+    height: 40vh;
+    border: 2px solid rgb(94, 119, 167);
+    border-radius: 20px;
+}
+
+.quad-2{
+    background-color: rgb(93, 129, 196);
+    height: 40vh;
+    border: 2px solid rgb(94, 119, 167);
+    border-radius: 20px;
+}
+
+.quad-3{
+    background-color: rgb(94, 119, 167);
+    height: 40vh;
+    border: 2px solid rgb(94, 119, 167);
+    border-radius: 20px;
+}
+
+.quad-4{
+    background-color: rgb(94, 108, 133);
+    height: 40vh;
+    border: 2px solid rgb(94, 119, 167);
+    border-radius: 20px;
+}
+
+div{
+    column-gap: 10px;
+}
+
+.my-features{
+    background-color: rgb(190, 201, 219);
+    height: 70vh;
+}
+
+.my-footer{
+    background-color: rgb(66, 113, 234);
+    height: 10%;
+}
