@@ -3,6 +3,9 @@ html, body{
     height: 100%;
     padding: 0;
 }
+my-container{
+    column-gap: 10px;
+}
 /* Matrix quadrant section*/
 .quadrants{
     height: 90vh;
@@ -11,12 +14,15 @@ html, body{
     overflow: auto;
     display: flex;
     flex-direction: column;
+    border-radius: 10px 0px 0px 10px;
+    border-right-style:none ;
 }
 
 .quads{
     overflow: inherit;
     height: 44.7vh;
     border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
 }
 
 .quad-1{
@@ -43,8 +49,10 @@ html, body{
     border: 2px solid rgb(94, 119, 167);
     overflow: auto;
     display: grid;
-    grid-template-rows: 7% 84% 5%;
-    padding: 5px;
+    grid-template-rows: 6% 84% 5%;
+    padding: 2px;
+    border-radius: 0px 10px 10px 0px;
+    border-left-style:none ;
 }
 
 .features-header{
@@ -53,11 +61,13 @@ html, body{
     background-color: rgb(66, 113, 141);
     color: white;
     width: inherit;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .features-body{
     background-color: rgb(190, 201, 219);
     overflow: auto;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .features-bottom{
@@ -65,5 +75,19 @@ html, body{
     bottom: 0px;
 }
 
+.my-feature{
+    height: 50px;
+    width: 70px;
+    background-color: rgb(32, 46, 46);
+    color: white;
+    border-radius: 10px;
+    overflow: auto;
+    text-align: center;
+}
 
+.my-feature-content{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
 /* other*/

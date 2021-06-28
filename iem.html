@@ -11,8 +11,10 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 	<link rel="stylesheet" href="assets/css/smoothproducts.css">
     <link rel="stylesheet" href="assets/css/iem.css">
+    <script src="assets/js/iem.js"></script>
     <title>iem</title>
 </head>
+
 <body>
     
     <main class="h-100 d-flex justify-content-center align-items-center">
@@ -21,32 +23,31 @@
 
                 <div class="col quadrants" id="quadrants">
                     <div class="row">
-                        <div class="col quad-1 quads" id="quad1"></div>
-                        <div class="col quad-2 quads" id="quad2"></div>
+                        <div class="col quad-1 quads" id="quad1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div class="col quad-2 quads" id="quad2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     </div>
                     <div class="row">
-                        <div class="col quad-3 quads" id="quad3"></div>
-                        <div class="col quad-4 quads" id="quad4"></div>
+                        <div class="col quad-3 quads" id="quad3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        <div class="col quad-4 quads" id="quad4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                     </div>
                 </div>
 
                 <div class="col-3 features" id="features">
-
                     <div class="features-header">
                         <h4>Features</h4>
                     </div>
 
-                    <div class="features-body">
-                        
+                    <div class="features-body pt-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <div class="my-feature" id="drag1" draggable="true" ondragstart="drag(event)"></div>
                     </div>
                     
                     <div class="features-bottom">
                         <a class="btn btn-primary btn-block" role="button" href="#">Add feature</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
-
 </body>
 </html>
