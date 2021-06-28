@@ -1,55 +1,69 @@
-.quads{
+html, body{
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+/* Matrix quadrant section*/
+.quadrants{
     height: 90vh;
     background-color: white;
     border: 2px solid rgb(94, 119, 167);
-    border-radius: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
+
+.quads{
+    overflow: inherit;
+    height: 44.7vh;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.quad-1{
+    background-color: cornflowerblue;
+}
+
+.quad-2{
+    background-color: rgb(93, 129, 196);
+}
+
+.quad-3{
+    background-color: rgb(94, 119, 167);
+}
+
+.quad-4{
+    background-color: rgb(94, 108, 133);
+}
+
+/*Features section */
 
 .features{
     background-color: rgb(255, 255, 255);
     height: 90vh;
     border: 2px solid rgb(94, 119, 167);
-    border-radius: 20px;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 7% 84% 5%;
+    padding: 5px;
 }
 
-.quad-1{
-    background-color: cornflowerblue;
-    height: 40vh;
-    border: 2px solid rgb(94, 119, 167);
-    border-radius: 20px;
+.features-header{
+    text-align: center;
+    padding-top: 2%;
+    background-color: rgb(66, 113, 141);
+    color: white;
+    width: inherit;
 }
 
-.quad-2{
-    background-color: rgb(93, 129, 196);
-    height: 40vh;
-    border: 2px solid rgb(94, 119, 167);
-    border-radius: 20px;
-}
-
-.quad-3{
-    background-color: rgb(94, 119, 167);
-    height: 40vh;
-    border: 2px solid rgb(94, 119, 167);
-    border-radius: 20px;
-}
-
-.quad-4{
-    background-color: rgb(94, 108, 133);
-    height: 40vh;
-    border: 2px solid rgb(94, 119, 167);
-    border-radius: 20px;
-}
-
-div{
-    column-gap: 10px;
-}
-
-.my-features{
+.features-body{
     background-color: rgb(190, 201, 219);
-    height: 70vh;
+    overflow: auto;
 }
 
-.my-footer{
-    background-color: rgb(66, 113, 234);
-    height: 10%;
+.features-bottom{
+    margin: 10px 0;
+    bottom: 0px;
 }
+
+
+/* other*/
