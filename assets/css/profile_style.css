@@ -7,7 +7,10 @@ body{
 .main-body {
     padding: 15px;
 }
-
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: rgb(25,28,147);
+}
 .nav-link {
     color: #4a5568;
 }
