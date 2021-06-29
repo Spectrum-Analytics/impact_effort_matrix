@@ -14,15 +14,33 @@
 </head>
 
 <body>
+	<header>
+		<nav class="navbar navbar-light navbar-expand-lg  clean-navbar" style="background: rgb(25,28,147);">
+			<div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(255,255,255);">Impact Effort
+					Matrix</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
+						class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(243,246,249);">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="home.html" style="color: rgb(239,239,239);">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="userProfile.html"
+								style="color: rgb(247,245,245);">Profile</a></li>
+						<li class="nav-item"><a class="nav-link" href="index.html" style="color: rgb(239,239,239);">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+<br>
+<br>
 	<div class="container">
 
 		<!-- Breadcrumb -->
-		<nav aria-label="breadcrumb" class="main-breadcrumb">
+	<!-- 	<nav aria-label="breadcrumb" class="main-breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="home.html">Home</a></li>
 				<li class="breadcrumb-item active" aria-current="page">Project Settings</li>
 			</ol>
-		</nav>
+		</nav> -->
 		<!-- /Breadcrumb -->
 
 		<div class="row gutters-sm">
@@ -60,11 +78,11 @@
 					</div>
 					<div class="card-body tab-content">
 						<div class="tab-pane active" id="project">
-							<h6>YOUR PROJECT INFORMATION</h6>
+							<h6>CREATE NEW PROJECT</h6>
 							<hr>
 							<form>
 								<div class="form-group">
-									<label for="fullName">Project Name</label>
+									<label for="projectName">Project Name</label>
 									<input type="text" class="form-control" id="projectName" aria-describedby="projectName"
 										placeholder="Project Name" value="">
 									<small id="fullNameHelp" class="form-text text-muted">The project name may appear
@@ -72,15 +90,14 @@
 										you are mentioned. You can change or remove it at any time.</small>
 								</div>
 								<div class="form-group">
-									<label for="fullName">Project Description</label>
+									<label for="projectDes">Project Description</label>
 									<textarea type="text" class="form-control" id="projectDes" aria-describedby="projectDes"
 										placeholder="Project Description" value=""></textarea>
 									<small id="projectDes" class="form-text text-muted">The description may appear
 										around here where you
 										are mentioned. You can change or remove it at any time.</small>
 								</div>
-								<button type="button" class="btn btn-primary rounded-pill" style="background: rgb(25,28,147);">Update
-									Project Info</button>
+								<button type="button" class="btn btn-primary rounded-pill" style="background: rgb(25,28,147);">Create Project</button>
 								<button type="reset" class="btn btn-light rounded-pill">Reset Changes</button>
 							</form>
 						</div>
