@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Profile</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="assets/css/profile_style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light navbar-expand-lg  clean-navbar" style="background: rgb(25,28,147);">
+            <div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(255,255,255);">Impact Effort
+                    Matrix</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
+                        class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(243,246,249);">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html"
+                                style="color: rgb(239,239,239);">Home</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="index.html"
+                                style="color: rgb(239,239,239);">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <div class="container">
+
+        <!-- Breadcrumb -->
+        <!-- <nav aria-label="breadcrumb" class="main-breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
+      </ol>
+    </nav> -->
+        <!-- /Breadcrumb -->
+
+        <div class="row gutters-sm">
+            <div class="col-md-4 d-none d-md-block">
+                <div class="card">
+                    <div class="card-body">
+                        <nav class="nav flex-column nav-pills nav-gap-y-1">
+                            <a href="#profile" data-toggle="tab"
+                                class="nav-item nav-link has-icon nav-link-faded active">
+                                Organisation Information
+                            </a>
+                            <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                                Account Settings
+                              </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header border-bottom mb-3 d-flex d-md-none">
+                        <ul class="nav nav-tabs card-header-tabs nav-gap-x-1" role="tablist">
+                            <li class="nav-item">
+                                <a href="#profile" data-toggle="tab" class="nav-link has-icon active"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#account" data-toggle="tab" class="nav-link has-icon"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body tab-content">
+                        <div class="tab-pane active" id="profile">
+                            <h6>ORGANISATION PROFILE INFORMATION</h6>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label for="orgName">Organisation Name</label>
+                                    <input type="text" class="form-control" id="orgName"
+                                        aria-describedby="orgName" placeholder="Organisation Name" value="">
+                                    <small id="orgName" class="form-text text-muted">Your organisation name may appear around
+                                        here where you are
+                                        mentioned. You can change or remove it at any time.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url">Organisation Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="@gmail.com"
+                                        value="">
+                                </div>
+                                <button type="button" class="btn btn-primary rounded-pill"
+                                    style="background: rgb(25,28,147);">Update
+                                    Profile</button>
+                                <button type="reset" class="btn btn-light rounded-pill">Reset Changes</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="account">
+                            <h6>ORGANISATION SETTINGS</h6>
+                            <hr>
+                            <form>
+                                <div class="form-group">
+                                    <label class="d-block text-danger">Delete Organisation</label>
+                                    <p class="text-muted font-size-sm">Once you delete your Organisation, there is no
+                                        going back. Please be
+                                        certain.</p>
+                                </div>
+                        <a class="btn btn-danger rounded-pill" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Delete Organisation</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="setup_feedback">Are you absolutely sure?</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                        This will permanently delete the Organisation
+                        <p> Please type the organisation name to confirm.</p>
+                    </div>
+                    <div style="margin: 10px;">
+                        <input type="text" class="form-control" id="orgName" placeholder="Organisation Name" value="">
+                    </div>
+                    <div class="modal-footer">
+                      <a href="orgProfile.html"><button type="button" class="btn btn-danger rounded-pill" >Confirm Delete</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+            <script src="assets/js/smoothproducts.min.js"></script>
+            <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

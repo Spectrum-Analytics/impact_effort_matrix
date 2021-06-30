@@ -81,6 +81,13 @@
               <hr>
               <form>
                 <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" id="username" aria-describedby="usernameHelp"
+                    placeholder="Enter your username" value="">
+                  <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username
+                    becomes available for anyone else to claim.</small>
+                </div>
+                <div class="form-group">
                   <label for="fullName">Full Name</label>
                   <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp"
                     placeholder="Enter your fullname" value="">
@@ -100,20 +107,14 @@
               <h6>ACCOUNT SETTINGS</h6>
               <hr>
               <form>
-                <div class="form-group">
-                  <label for="username">Username</label>
-                  <input type="text" class="form-control" id="username" aria-describedby="usernameHelp"
-                    placeholder="Enter your username" value="">
-                  <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username
-                    becomes available for anyone else to claim.</small>
-                </div>
-                <hr>
+                
                 <div class="form-group">
                   <label class="d-block text-danger">Delete Account</label>
-                  <p class="text-muted font-size-sm">Once you delete your account, there is no going back. Please be
-                    certain.</p>
-                </div>
-                <button class="btn btn-danger rounded-pill" type="button">Delete Account</button>
+                  <p class="text-muted font-size-sm">Once you delete your account, there is no
+                      going back. Please be
+                      certain.</p>
+              </div>
+      <a class="btn btn-danger rounded-pill" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Delete Account</a>
               </form>
             </div>
             <div class="tab-pane" id="security">
@@ -134,6 +135,29 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="setup_feedback">Are you absolutely sure?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                This will permanently delete your account
+                <p> Please type your username to confirm.</p>
+            </div>
+            <div style="margin: 10px;">
+                <input type="text" class="form-control" id="orgName" placeholder="username" value="">
+            </div>
+            <div class="modal-footer">
+              <a href="userProfile.html"><button type="button" class="btn btn-danger rounded-pill" >Confirm Delete</button></a>
+            </div>
+          </div>
+        </div>
       </div>
       <script src="assets/js/jquery.min.js"></script>
       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
