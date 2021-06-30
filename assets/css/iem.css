@@ -1,0 +1,113 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+
+/* Matrix quadrant section*/
+.quadrants{
+    box-sizing: border-box;
+    height: 90vh;
+    background-color: #e2e8f0;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 0px 0px 10px;
+    border-right-style:none ;
+}
+
+.quads{
+    overflow: inherit;
+    height: 43vh;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.quad-1{
+    background-color: #00cd8b;
+}
+
+.quad-2{
+    background-color: #35adc2;
+}
+
+.quad-3{
+    background-color: #6293f0;
+}
+
+.quad-4{
+    background-color: #17bfa3;
+}
+
+/*Features section */
+
+.features{
+    background-color: #e2e8f0;
+    height: 90vh;
+    overflow: auto;
+    display: grid;
+    grid-template-rows: 6% 84% 5%;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 0px 10px 10px 0px;
+    border-left-style:none ;
+}
+
+.features-header{
+    text-align: center;
+    padding-top: 2%;
+    background-color: rgb(25,28,147);
+    color: white;
+    width: inherit;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.quad-header{
+    text-align: center;
+    opacity: 80%;
+    font-size: medium;
+    width: 100%;
+    
+}
+
+.features-body{
+    background-color: white;
+    overflow: auto;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.features-bottom{
+    margin: 5px 0;
+    bottom: 0px;
+}
+
+#feature-button{
+    border-radius: 10px;
+
+}
+
+.my-feature{
+    overflow: auto;
+    height: 40px;
+    width: 270px;
+    background-color:rgb(1, 3, 81);
+    color: white;
+    border-radius: 10px;
+    overflow: auto;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;;
+}
+#feature-instruction{
+    text-align: center;
+    opacity: 50%;
+    font-size: small;
+}
+
+.my-feature-content{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+/* other*/
