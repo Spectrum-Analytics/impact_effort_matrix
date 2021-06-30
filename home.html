@@ -12,6 +12,7 @@
 	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 	<link rel="stylesheet" href="assets/css/smoothproducts.css">
+	<script src="assets/js/home_search.js"></script>
 </head>
 
 <body>
@@ -46,21 +47,20 @@
 					<div class="row">
 
 						<div class="col-md-12">
-							<div class="input-group"><input type="text" placeholder="Search Here" class="input-sm form-control"> <span
-									class="input-group-btn">
+							<div class="input-group">
+								<input type="text" placeholder="Search Here" class="input-sm form-control" id="searchInput" onkeyup="myFunction()"> <span class="input-group-btn">
 									<a href="#" class="btn btn-success btn-xs" style="background: rgb(26, 204, 141);"><i class="bi bi-search"></i></a>
-								</span></div>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
 				<br />
 				<br />
-				<table class="table table-hover p-table">
+				<table class="table table-hover p-table" id="listOfProjects">
 					<thead>
-						<tr>
+						<tr class="header">
 							<th>Project Name</th>
-
-
 							<th>Project Status</th>
 							<th>Custom</th>
 						</tr>
@@ -72,8 +72,6 @@
 								<br>
 								<small>Created 25.06.2021</small>
 							</td>
-
-
 							<td>
 								<span class="label label-primary">Active</span>
 							</td>
@@ -89,7 +87,6 @@
 								<br>
 								<small>Created 25.06.2021</small>
 							</td>
-
 
 							<td>
 								<span class="label label-primary">Active</span>
@@ -134,7 +131,6 @@
 								<a href="project.html" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
 							</td>
 						</tr>
-
 					</tbody>
 				</table>
 			</section>
