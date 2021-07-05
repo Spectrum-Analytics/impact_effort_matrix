@@ -1,34 +1,44 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-	<link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-	<link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
     <link rel="stylesheet" href="assets/css/iem.css">
     <script src="assets/js/iem.js"></script>
     <title>iem</title>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+    </script>
 </head>
 
 <body>
     <header>
-		<nav class="navbar navbar-light navbar-expand-lg  clean-navbar" style="background: rgb(25,28,147); height:80px;">
-			<div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(255,255,255);">Project Name</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
-						class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-				<div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(243,246,249);">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="home.html" style="color: rgb(239,239,239);">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html" style="color: rgb(239,239,239);">Logout</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header>
+        <nav class="navbar navbar-light navbar-expand-lg  clean-navbar"
+            style="background: rgb(25,28,147); height:80px;">
+            <div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(255,255,255);">Project
+                    Name</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
+                        class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(243,246,249);">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html"
+                                style="color: rgb(239,239,239);">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html"
+                                style="color: rgb(239,239,239);">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main class="h-100 d-flex justify-content-center align-items-center pt-3">
         <div class="container">
             <div class="row justify-content-md-center">
@@ -65,17 +75,47 @@
                         <h4>Features</h4>
                     </div>
 
-                    <div class="features-body pt-3" ondrop="drop(event)" ondragover="allowDrop(event)">
-                        <p id="feature-instruction">Drag feature and drop in the quadrants</p>
-                        <div class="my-feature" id="drag1" draggable="true" ondragstart="drag(event)">Create Organisation</div>
-                        <div class="my-feature" id="drag2" draggable="true" ondragstart=" drag(event)">Add Employees</div>
-                        <div class="my-feature" id="drag3" draggable="true" ondragstart="drag(event)">Create Project</div>
-                        <div class="my-feature" id="drag4" draggable="true" ondragstart="drag(event)">Add Participants</div>
+                    <div class="features-body pt-3" id="features-body" ondrop="drop(event)"
+                        ondragover="allowDrop(event)">
+                        <a href="#" id="feature-tip" data-toggle="tooltip" title="Drag feature and drop in the quadrants">Help</a>
+                        <div class="my-feature" id="drag1" draggable="true" ondragstart="drag(event)">Create
+                            Organisation</div>
+                        <div class="my-feature" id="drag2" draggable="true" ondragstart=" drag(event)">Add Employees
+                        </div>
+                        <div class="my-feature" id="drag3" draggable="true" ondragstart="drag(event)">Create Project
+                        </div>
+                        <div class="my-feature" id="drag4" draggable="true" ondragstart="drag(event)">Add Participants
+                        </div>
+                        <script>
+
+                            let list = document.getElementById("features-body");
+
+                            featureList.forEach((featuredata) => {
+                                var num = 5;
+                                let feature = document.createElement("div");
+                                feature.id = "drag" + num;
+                                feature.draggable = "true";
+                                ondragstart = "drag(event)";
+                                feature.innerHTML = featuredata;
+                                feature.style.overflow = "auto";
+                                feature.style.height = "40px";
+                                feature.style.width = "270px";
+                                feature.style.background = "rgb(1, 3, 81)";
+                                feature.style.color = "white";
+                                feature.style.textAlign = "center";
+                                feature.style.borderRadius = "10px";
+                                feature.style.margin = "5px";
+                                feature.style.padding = "5px";
+                                list.appendChild(feature);
+                                num++;
+                            });
+                        </script>
                     </div>
-                    
                     <div class="features-bottom">
-                        <a href="#" id="feature-button" class="btn btn-primary border btn-block" style="background: rgb(25,28,147);">
-							Add Feature</a>
+                        <textarea type="text" id="my-input" cols="26" placeholder="Title..."></textarea>
+                        <button onclick="newFeature()" id="feature-button" class="btn btn-primary border btn-block"
+                            style="background: rgb(25,28,147);">
+                            Add Feature</button>
                     </div>
                 </div>
 
@@ -83,4 +123,5 @@
         </div>
     </main>
 </body>
+
 </html>
