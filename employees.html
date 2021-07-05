@@ -6,7 +6,7 @@
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+	
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -24,7 +24,7 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <title>Home</title>
+    <title>Employees</title>
 </head>
 <body>
     <!-- ======= Header ======= -->
@@ -36,8 +36,8 @@
 			</div>
 			<nav id="navbar" class="navbar">
 				<ul>
-				<li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-				<li><a class="nav-link scrollto" href="employees.html">Employees</a></li>
+				<li><a class="nav-link scrollto" href="home.html">Home</a></li>
+				<li><a class="nav-link scrollto active" href="#">Employees</a></li>
 				<li><a class="nav-link scrollto" href="userProfile.html">User Profile</a></li>
 				<li><a class="nav-link scrollto" href="orgProfile.html">Company Profile</a></li>
 				<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
@@ -48,9 +48,9 @@
 	</header><!-- End Header -->
 
 	<section class="container">
-		<a class="home_green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Create Project</a>
+		<a class="home_green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Add employee</a>
 		<div class="pt-3">
-			<input type="text" placeholder="Type here to search for projects" class="input-sm form-control" id="searchInput" onkeyup="myFunction()">
+			<input type="text" placeholder="Type here to search for employees" class="input-sm form-control" id="searchInput" onkeyup="myFunction()">
 		</div>
 	</section>
 	
@@ -58,75 +58,56 @@
 		<table class="table table-hover p-table container" id="listOfProjects">
 			<thead>
 				<tr class="header">
-					<th>Project Name</th>
-					<th>Project Status</th>
+					<th>Employee Name</th>
 					<th>Custom</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td class="p-name">
-						<a href="iem.html">IMPACT EFFORT MATRIX</a>
+						<a href="#">Thor Odin</a>
 						<br>
-						<small>Created 25.06.2021</small>
+						<small>Added on 25.06.2021</small>
 					</td>
 					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
-						<a href="project.html" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="project.html" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
+						<a href="#" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
+						<a href="#" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
 					</td>
 				</tr>
 				<tr>
 					<td class="p-name">
-						<a href="iem.html">LETSHEGO MOBILE APPLICATION</a>
+						<a href="#">Loki Odin</a>
 						<br>
-						<small>Created 25.06.2021</small>
+						<small>Added on 25.06.2021</small>
 					</td>
 
 					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
-						<a href="project.html" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i> </a>
-						<a href="project.html" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
+						<a href="#" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i> </a>
+						<a href="#" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
 					</td>
 				</tr>
 				<tr>
 					<td class="p-name">
-						<a href="iem.html">BLOOD TRANSFUSION WEBSITE</a>
+						<a href="#">Steve Roders</a>
 						<br>
-						<small>Created 25.06.2021</small>
+						<small>Added on 25.06.2021</small>
 					</td>
 
-
 					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
 						<a href="project" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
 						<a href="project" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
 					</td>
 				</tr>
 				<tr>
 					<td class="p-name">
-						<a href="iem.html">CTO SOFTWARE</a>
+						<a href="#">Bruce Banner</a>
 						<br>
-						<small>Created 25.06.2021</small>
+						<small>Added on 25.06.2021</small>
 					</td>
 
-
 					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
-						<a href="project.html" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="project.html" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
+						<a href="#" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
+						<a href="#" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
 					</td>
 				</tr>
 			</tbody>
@@ -137,22 +118,22 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="setup_feedback">Create New Project</h5>
+				<h5 class="modal-title" id="setup_feedback">Add employee</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<div style="margin: 10px;">
-					<input type="text" class="form-control" id="orgName" placeholder="Project Name" value="">
+					<input type="text" class="form-control" id="employeeName" placeholder="Employee name">
 				</div>
 				<div style="margin: 10px;">
-					<textarea type="text" class="form-control" id="orgDes" placeholder="Project Description" value=""></textarea>
+					<input type="text" class="form-control" id="employeeEmail" placeholder="Employee email">
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button class="red_button" data-dismiss="modal">Cancel</button>
-				<a href="iem.html"><button type="button" class="modal_green_button">Create Project</button></a>
+                <button class="red_button" data-dismiss="modal">Cancel</button>
+				<a href="#"><button type="button" class="modal_green_button">Add employee</button></a>
 			</div>
 			</div>
 		</div>
