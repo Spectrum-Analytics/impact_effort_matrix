@@ -13,6 +13,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
 	<link rel="stylesheet" href="assets/css/smoothproducts.css">
 	<script src="assets/js/home_search.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
 </head>
 
 <body>
@@ -40,7 +43,7 @@
 			<section class="panel">
 				<header class="panel-heading">
 					<span class="pull-right">
-						<a class="btn btn-success btn-md rounded-pill" data-toggle="modal" data-target="#feedback" role="button" href="#feedback" style="background: rgb(26, 204, 141);">Create Project</a>
+						<a id="createproject" class="btn btn-success btn-md rounded-pill"  data-toggle="modal" data-target="#feedback" role="button" href="#feedback" style="background: rgb(26, 204, 141);">Create Project</a>
 					</span>
 				</header>
 				<br />
@@ -146,7 +149,9 @@
 				<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div class="modal-body">
+
+			
+			<div class="modal-body" >
 				<div style="margin: 10px;">
 					<input type="text" class="form-control" id="orgName" placeholder="Project Name" value="">
 				</div>
@@ -154,18 +159,34 @@
 					<textarea type="text" class="form-control" id="orgDes" placeholder="Project Description" value=""></textarea>
 				</div>
 			</div>
-			<div class="modal-footer">
-				<a href="iem.html"><button type="button" class="btn btn-primary rounded-pill"  style="background: rgb(25,28,147);">Create Project</button></a>
+
+			<div class="modal-footer" onsubmit="return modalfoote()" >
+				<input type="submit" value="Create Project"  class="btn btn-primary rounded-pill"  style="background: rgb(25,28,147);">
 			</div>
 			</div>
 		</div>
 		</div>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const db = firebase.firestore();
+  db.settings({timestampInSnapshots: true});
+</script>
 
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 	<script src="assets/js/smoothproducts.min.js"></script>
 	<script src="assets/js/theme.js"></script>
+	<script src="assets/js/createProject.js"></script>
 </body>
 
 </html>
