@@ -1,6 +1,8 @@
 <html lang="en">
 <head>
 
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,6 +39,7 @@
 				<h1><a href="index.html"><span>Impact Effort Matrix</span></a></h1>
 				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 			</div>
+
 			<nav id="navbar" class="navbar">
 				<ul>
 				<li><a class="nav-link scrollto active" href="index.html">Home</a></li>
@@ -89,6 +92,7 @@
 						<small>Created 25.06.2021</small>
 					</td>
 
+
 					<td>
 						<span class="label label-primary">Active</span>
 					</td>
@@ -135,30 +139,33 @@
 		</table>
 	</main>
 
+
 	<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
 
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 
 				<div class="modal-header">
-					<h5 class="modal-title" id="createProject">Create New Project</h5>
+					<h5 class="modal-title" id="setup_feedback">Create New Project</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 
 				</div>
-				<div class="modal-body">
+
+
+				<div class="modal-body" id="add-project-form">
 					<div style="margin: 10px;">
-						<input type="text" class="form-control" id="orgName" placeholder="Project Name" value="">
+						<input type="text" class="form-control" id="orgName" name="name" placeholder="Project Name" value="">
 					</div>
 					<div style="margin: 10px;">
-						<textarea type="text" class="form-control" id="orgDes" placeholder="Project Description"
+						<textarea type="text" class="form-control" id="orgDes" name="description" placeholder="Project Description"
 							value=""></textarea>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<a href="iem.html"><button type="button" class="btn btn-primary rounded-pill"
-							style="background: rgb(25,28,147);">Create Project</button></a>
+					<input type="submit" value="Create Project" class="btn btn-primary rounded-pill"
+						style="background: rgb(25,28,147);">
 				</div>
 			</div>
 
@@ -169,6 +176,7 @@
 			</div>
 		</div>
 	</div>
+
 
     <footer class="my-footer d-flex justify-content-center align-items-center">
         <div class="credits">
@@ -183,6 +191,7 @@
 	<script src="assets/vendor/php-email-form/validate.js"></script>
 	<script src="assets/vendor/purecounter/purecounter.js"></script>
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
 
 
 	<!-- Template Main JS File -->
