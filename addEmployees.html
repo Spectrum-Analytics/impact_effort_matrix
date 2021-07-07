@@ -66,11 +66,12 @@
                     
                     <div class="row">
                       <div class="col">
-                        <button class="purple_button">Upload file</button>
+                        <label for="fileUpload" class="purple_button">Upload file </label>  
+                        <input id="fileUpload" type="file"/>
                       </div>
-                      <div class="col">
-                        <a class="green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Complete</a>
-                      </div>
+                      <div class="col"><a class="green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Complete</a></div>
+                      
+                        
                     </div>
                     
                 </form> 
@@ -119,6 +120,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/fileUpload.js"></script>
 
   <!--IEM scripts-->
   <script src="assets/js/add_feature.js"></script>
