@@ -1,7 +1,9 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Fonts -->
@@ -13,6 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/iem.css">
+
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -27,6 +30,7 @@
     <title>IEM</title>
 </head>
 <body>
+
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
     
@@ -46,6 +50,7 @@
         </div>
     </header><!-- End Header -->
 
+
     <main class="h-100 d-flex justify-content-center align-items-center">
         <div class="container container-matrix">
             <div class="matrix">
@@ -58,6 +63,7 @@
                     <div>
                         <p class="quad-heading">High Impact/High Effort</p>
                     </div>
+
                     <button id="expand_button" class="bi bi-arrows-expand" onclick="expandQuadrant()"></button>
                 </div>
                 <div id="quad3" class="quadrant-3 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -78,6 +84,7 @@
                 <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="features">
                     <div>
                         <p id="feature-body-instruction">Drag and drop features to the quadrants</p>
+
                     </div>
                     <div class="my-feature" id="drag1" draggable="true" ondragstart="drag(event)">Create Organisation</div>
                     <div class="my-feature" id="drag2" draggable="true" ondragstart=" drag(event)">Add Employees</div>
@@ -133,5 +140,7 @@
   <script src="assets/js/add_feature.js"></script>
   <script src="assets/js/drag_and_drop.js"></script>
   <script src="assets/js/expand_quadrants.js"></script>
+
 </body>
+
 </html>
