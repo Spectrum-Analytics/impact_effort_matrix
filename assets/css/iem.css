@@ -185,3 +185,9 @@
     background: #be0000;
     border: none;
 }
+
+li {
+    display: inline-block;
+    margin: 10 10 10px ;
+
+  }
