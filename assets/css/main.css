@@ -8,7 +8,7 @@ form{
     font-size: small;
 }
 
-/*green button*/
+/*custom buttons*/
 .green_button {
     text-align: center;
     width: 100%;
@@ -22,6 +22,21 @@ form{
     transition: 0.5s;
     color: #fff;
     background: #1acc8d;
+    border: none;
+}
+.purple_button {
+    text-align: center;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #010351;
     border: none;
 }
 .home_green_button {
