@@ -47,7 +47,7 @@ html, body{
     height: 90vh;
     overflow: auto;
     display: grid;
-    grid-template-rows: 6% 84% 5%;
+    grid-template-rows: 6% 74% 15%;
     padding: 2px;
     margin: 5px;
     border-radius: 0px 10px 10px 0px;
@@ -74,12 +74,16 @@ html, body{
 .features-body{
     background-color: white;
     overflow: auto;
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px;
 }
 
 .features-bottom{
     margin: 5px 0;
     bottom: 0px;
+}
+
+#my-input{
+    border-radius: 0px 0px 10px 10px;
 }
 
 #feature-button{
@@ -94,7 +98,6 @@ html, body{
     background-color:rgb(1, 3, 81);
     color: white;
     border-radius: 10px;
-    overflow: auto;
     text-align: center;
     margin: 5px;
     padding: 5px;;
@@ -103,6 +106,12 @@ html, body{
     text-align: center;
     opacity: 50%;
     font-size: small;
+}
+
+#feature-tip{
+    margin: 10px;
+    font-size: small;
+    opacity: 50%;
 }
 
 .my-feature-content{
