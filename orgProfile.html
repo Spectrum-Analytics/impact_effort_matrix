@@ -1,49 +1,53 @@
-<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Profile</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/smoothproducts.css">
-    <link rel="stylesheet" href="assets/css/profile_style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/iem.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <title>Profile | Organisation</title>
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-light navbar-expand-lg  clean-navbar" style="background: rgb(25,28,147);">
-            <div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(255,255,255);">Impact Effort
-                    Matrix</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
-                        class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(243,246,249);">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="home.html"
-                                style="color: rgb(239,239,239);">Home</a></li>
+    <!-- ======= Header ======= -->
+	<header id="header" class="d-flex align-items-center">
+		<div class="container d-flex align-items-center justify-content-between">
+			<div class="logo">
+				<h1><a href="index.html"><span>Impact Effort Matrix</span></a></h1>
+				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+			</div>
+			<nav id="navbar" class="navbar">
+				<ul>
+				<li><a class="nav-link scrollto" href="home.html">Home</a></li>
+				<li><a class="nav-link scrollto" href="employees.html">Employees</a></li>
+				<li><a class="nav-link scrollto" href="userProfile.html">User Profile</a></li>
+				<li><a class="nav-link scrollto active" href="orgProfile.html">Company Profile</a></li>
+				<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav><!-- .navbar -->
+		</div>
+	</header><!-- End Header -->
 
-                        <li class="nav-item"><a class="nav-link" href="index.html"
-                                style="color: rgb(239,239,239);">Logout</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <br>
-    <br>
-    <div class="container">
-
-        <!-- Breadcrumb -->
-        <!-- <nav aria-label="breadcrumb" class="main-breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Profile Settings</li>
-      </ol>
-    </nav> -->
-        <!-- /Breadcrumb -->
-
+    <main class="container">
         <div class="row gutters-sm">
             <div class="col-md-4 d-none d-md-block">
                 <div class="card">
@@ -134,12 +138,27 @@
                   </div>
                 </div>
               </div>
-            
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-            <script src="assets/js/smoothproducts.min.js"></script>
-            <script src="assets/js/theme.js"></script>
-</body>
+    </main>
 
+    <footer class="my-footer d-flex justify-content-center align-items-center">
+        <div class="credits">
+            Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
+        </div>
+    </footer>
+
+    <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!--IEM scripts-->
+  <script src="assets/js/add_feature.js"></script>
+  <script src="assets/js/drag_and_drop.js"></script>
+</body>
 </html>

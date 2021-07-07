@@ -1,112 +1,161 @@
-html, body{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*matrix*/
+.container-matrix{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    overflow: hidden;
+}
+.matrix{
+    position: absolute;
+    width: 68%;
     height: 100%;
-    padding: 0;
+    left: 0;
 }
-
-/* Matrix quadrant section*/
-.quadrants{
-    box-sizing: border-box;
-    height: 90vh;
-    background-color: #e2e8f0;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px 0px 0px 10px;
-    border-right-style:none ;
-}
-
-.quads{
-    overflow: inherit;
-    height: 43vh;
-    border: 2px solid #e2e8f0;
+.quadrant{
     border-radius: 10px;
-    margin: 5px;
+    width: 49%;
+    height: 49%;
+    position: absolute;
+    overflow: hidden;
 }
-
-.quad-1{
-    background-color: #00cd8b;
-}
-
-.quad-2{
-    background-color: #35adc2;
-}
-
-.quad-3{
-    background-color: #6293f0;
-}
-
-.quad-4{
-    background-color: #17bfa3;
-}
-
-/*Features section */
-
-.features{
-    background-color: #e2e8f0;
-    height: 90vh;
-    overflow: auto;
-    display: grid;
-    grid-template-rows: 6% 74% 15%;
-    padding: 2px;
-    margin: 5px;
-    border-radius: 0px 10px 10px 0px;
-    border-left-style:none ;
-}
-
-.features-header{
+#quad2.fullscreen{
+    z-index: 9999; 
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+ }
+.quad-heading{
     text-align: center;
-    padding-top: 2%;
+    margin: 5px 0;
+    color: white;
+}
+.quadrant-1{
+    background-color: #00cd8b;
+    top: 0;
+    left: 0;
+}
+.quadrant-2{
+    background-color: #35adc2;
+    top: 0;
+    right: 0;
+}
+.quadrant-3{
+    background-color: #6293f0;
+    bottom: 0;
+    left: 0;
+}
+.quadrant-4{
+    background-color: #17bfa3;
+    bottom: 0;
+    right: 0;
+}
+
+/*Expand quadrant screen*/
+#expand_button{
+    position: absolute;
+    bottom: 3;
+    right: 3;
+    border: none;
+    background-color: rgba(245, 222, 179, 0);
+}
+
+
+
+/*features*/
+.features{
+
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    right: 0;
+    border: 1px solid rgb(25,28,147);
+    border-radius: 10px;
+
+}
+.feature-head{
+    text-align: center;
+    height: 10%;
     background-color: rgb(25,28,147);
     color: white;
-    width: inherit;
-    border-radius: 10px 10px 0px 0px;
-}
-
-.quad-header{
-    text-align: center;
-    color: white;
-    font-size: medium;
     width: 100%;
-    
+    border-radius: 10px 10px 0px 0px;
+    position: static;
 }
-
-.features-body{
+.feature-body{
+    height: 80%;
+    width: 100%;
     background-color: white;
-    overflow: auto;
-    border-radius: 0px;
+
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    color: black;
+    position: static;
+
+}
+#feature-body-instruction{
+    color: black;
+    text-align: center;
+    opacity: 50%;
 }
 
-.features-bottom{
-    margin: 5px 0;
-    bottom: 0px;
-}
-
-#my-input{
+.feature-bottom{
+    overflow: hidden;
+    height: 10%;
+    width: 100%;
     border-radius: 0px 0px 10px 10px;
-}
-
-#feature-button{
-    border-radius: 10px;
+    text-align: center;
+    position: static;
 
 }
 
+#add-feature-content{
+    height: 100%;
+    width: 100%;
+    color: black;
+}
 .my-feature{
-    overflow: auto;
-    height: 40px;
-    width: 270px;
+    height: 15%;
+    width: 90%;
     background-color:rgb(1, 3, 81);
     color: white;
     border-radius: 10px;
+
+    overflow: hidden;
+
     text-align: center;
-    margin: 5px;
-    padding: 5px;;
+    margin: 5px 15;
 }
-#feature-instruction{
+
+/*footer*/
+.my-footer{
+    position: absolute;
+    bottom: 0;
+    background: #010351;
+    width: 100%;
     text-align: center;
-    opacity: 50%;
-    font-size: small;
+    height: 10%;
 }
+.credits {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
+
+
+/*green button*/
+.green_button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
 
 #feature-tip{
     margin: 10px;
@@ -115,8 +164,26 @@ html, body{
 }
 
 .my-feature-content{
+
     display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
+    padding: 5px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1acc8d;
+    border: none;
 }
-/* other*/
+/*red button*/
+.red_button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #be0000;
+    border: none;
+}
