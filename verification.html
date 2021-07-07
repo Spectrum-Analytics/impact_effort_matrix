@@ -1,62 +1,104 @@
-<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Verify Email</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-    <link rel="stylesheet" href="assets/css/smoothproducts.css">
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Fonts -->
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <title>Verify Account</title>
+</head>
 <body>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top clean-navbar" style="background: rgb(25,28,147);">
-        <div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(255,255,255);">Impact Effort Matrix</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(243,246,249);">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html" style="color: rgb(245,245,245);">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="features.html" style="color: rgb(242,241,241);">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="registration.html" style="color: rgb(239,239,239);">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html" style="color: rgb(247,245,245);">Login</a></li>
-                </ul>
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1><a href="index.html"><span>Impact Effort Matrix</span></a></h1>
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#features">Features</a></li>
+          <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="index.html#pricing">Pricing</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto active" href="registration.html">Create Organisation</a></li>
+          <li><a class="nav-link scrollto" href="login.html">Login</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <main class="h-100 d-flex justify-content-center align-items-center">
+        <div>
+            <div>
+                <h1>Verify Account</h1>
+            </div>
+            <form>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <a class="green_button" role="button" href="addEmployees.html">Verify</a>
+                </div>
+            </form> 
+            <div class="form_question">
+                <p>
+                    Didn't recieve an email?
+                    <a href="">Send again</a>
+                </p>
             </div>
         </div>
-    </nav>
-    <main class="page login-page">
-        <section class="clean-block clean-form">
-            <div class="container">
-                <div class="block-heading">
-                    <h1>Verify Account</h1>
-                    <form style="border-radius: 2;color: rgb(33, 37, 41);border: 2px solid rgb(66,113,234) ;border-top-width: 2px;">
-                        <div class="form-group text-left"><label class="text-left" for="name" style="text-align: left;">Verification Code</label>
-                            <div id="name" class="inputs d-flex flex-row justify-content-center mt-2"> 
-                                <input class="m-2 text-center form-control rounded" type="text" id="input1" v-on:keyup="inputenter(1)" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
-                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(2)" type="text" id="input2" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
-                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(3)" type="text" id="input3" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
-                                <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(4)" type="text" id="input4" maxlength="1" style="border: 2px solid rgb(160,155,241) ;"/> 
-                            </div>
-                            <a class="btn btn-primary btn-block border rounded-pill" role="button" href="addEmployees.html" style="background: rgb(25,28,147);">Verify</a>
-                        <div style="margin: 10px; text-align: center;">
-                            <p style="font-size: 13px; opacity: 100%;">Didn't receive verification code ?&nbsp;<a class="text-left forgot" style="text-align: left;" href="#">SEND AGAIN</a></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
     </main>
-    <footer class="page-footer dark" style="background: rgb(1, 3, 81);height: 100px;">
-        <div class="footer-copyright" style="background: rgb(1, 3, 81);border-style: none;">
-            <p>© 2021 Copyright Text</p>
+
+    <footer class="my-footer d-flex justify-content-center align-items-center">
+        <div class="credits">
+            Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
         </div>
     </footer>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-    <script src="assets/js/smoothproducts.min.js"></script>
-    <script src="assets/js/theme.js"></script>
-</body>
 
+    <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!--IEM scripts-->
+  <script src="assets/js/add_feature.js"></script>
+  <script src="assets/js/drag_and_drop.js"></script>
+</body>
 </html>
