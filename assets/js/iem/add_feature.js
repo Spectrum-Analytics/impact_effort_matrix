@@ -1,33 +1,19 @@
 let featureList = ["Create Organisation", "Add Employees"];
 function addFeature(){
-  var inputValue = document.getElementById("my-input").value;
+  var inputValue = document.getElementById("AddFeatureContent").value;
   if (inputValue === "") {
     alert("You must write something!!!");
   }
   else {
     featureList.push(inputValue);
-    document.getElementById("my-input").value = "";
+    document.getElementById("AddFeatureContent").value = "";
   }       
 
 }
 
-function allowDrop(ev) {
-    ev.preventDefault();
-  }
-  
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
-
-  function newFeature() {
+function newFeature() {
     var num = 5;
-    var inputValue = document.getElementById("my-input").value;
+    var inputValue = document.getElementById("AddFeatureContent").value;
     var feature = document.createElement("DIV");
     feature.id = "drag"+num;
     feature.draggable = "true";
@@ -47,7 +33,7 @@ function allowDrop(ev) {
     else {
       featureList.push(inputValue);
       document.getElementById("features-body").appendChild(feature);
-      document.getElementById("my-input").value = "";
+      document.getElementById("AddFeatureContent").value = "";
       num++;
     }         
   }
