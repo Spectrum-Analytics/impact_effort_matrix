@@ -1,38 +1,50 @@
 <html lang="en">
+
 <head>
 
 
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="assets/css/main.css">
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+
+	<link rel="stylesheet" href="assets/css/main.css">
 
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
 
-    <title>Home</title>
+	<title>Home</title>
 </head>
+
 <body>
 
-    <!-- ======= Header ======= -->
+	<!-- ======= Header ======= -->
 	<header id="header" class="d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between">
 			<div class="logo">
@@ -42,105 +54,40 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-				<li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-				<li><a class="nav-link scrollto" href="employees.html">Employees</a></li>
-				<li><a class="nav-link scrollto" href="userProfile.html">User Profile</a></li>
-				<li><a class="nav-link scrollto" href="viewOrganisationProfile.html">Company Profile</a></li>
-				<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
+					<li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+					<li><a class="nav-link scrollto" href="employees.html">Employees</a></li>
+					<li><a class="nav-link scrollto" href="userProfile.html">User Profile</a></li>
+					<li><a class="nav-link scrollto" href="viewOrganisationProfile.html">Company Profile</a></li>
+					<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
 		</div>
 	</header><!-- End Header -->
 
-	<section class="container">
-		<a class="home_green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Create Project</a>
+	<main class="container mt-4">
+		<a class="edit_green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Create
+			Project</a>
 		<div class="pt-3">
-			<input style="border-radius: 25px;" type="text" placeholder="Type here to search for projects" class="input-sm form-control" id="searchInput" onkeyup="home_search()">
+			<input style="border-radius: 25px;" type="text" placeholder="Type here to search for projects"
+				class="input-sm form-control" id="searchInput" onkeyup="home_search()">
 		</div>
-	</section>
-	
-	<main class="container">
-		<table class="table table-hover p-table container" id="listOfProjects">
+		<table class="table table-hover p-table container mt-4" id="listOfProjects">
 			<thead>
 				<tr class="header">
 					<th>Project Name</th>
-					<th>Project Status</th>
-					<th>Custom</th>
+					<th>Project description</th>
+					<th>Status</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td class="p-name">
-						<a href="iem.html">IMPACT EFFORT MATRIX</a>
-						<br>
-						<small>Created 25.06.2021</small>
-					</td>
-					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
-						<a href="project.html" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="project.html" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td class="p-name">
-						<a href="iem.html">LETSHEGO MOBILE APPLICATION</a>
-						<br>
-						<small>Created 25.06.2021</small>
-					</td>
-
-
-					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
-						<a href="project.html" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i> </a>
-						<a href="project.html" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td class="p-name">
-						<a href="iem.html">BLOOD TRANSFUSION WEBSITE</a>
-						<br>
-						<small>Created 25.06.2021</small>
-					</td>
-
-					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
-						<a href="project" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="project" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td class="p-name">
-						<a href="iem.html">CTO SOFTWARE</a>
-						<br>
-						<small>Created 25.06.2021</small>
-					</td>
-
-
-					<td>
-						<span class="label label-primary">Active</span>
-					</td>
-					<td>
-						<a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a>
-						<a href="project.html" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="project.html" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
+			<tbody id="project-list">
 			</tbody>
 		</table>
 	</main>
 
 
-	<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
+	<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle"
+		aria-hidden="true">
 
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
@@ -154,35 +101,30 @@
 				</div>
 
 
-				<div class="modal-body" id="add-project-form">
-					<div style="margin: 10px;">
-						<input type="text" class="form-control" id="orgName" name="name" placeholder="Project Name" value="">
-					</div>
-					<div style="margin: 10px;">
-						<textarea type="text" class="form-control" id="orgDes" name="description" placeholder="Project Description"
-							value=""></textarea>
-					</div>
+				<div class="modal-body">
+					<form id="add-project-form">
+						<div class="form-group">
+							<input class="form-control item" type="text" name="name" placeholder="Project name">
+						</div>
+						<div class="form-group">
+							<textarea name="description" class="form-control item" placeholder="Project description"></textarea>
+						</div>
+						<div class="form-group">
+							<button class="green_button" role="button">Add Project</button>
+						</div>
+					</form>
 				</div>
-				<div class="modal-footer">
-					<input type="submit" value="Create Project" class="btn btn-primary rounded-pill"
-						style="background: rgb(25,28,147);">
-				</div>
-			</div>
-
-			<div class="modal-footer">
-				<button class="red_button" data-dismiss="modal">Cancel</button>
-				<a href="iem.html"><button type="button" class="modal_green_button">Create Project</button></a>
-			</div>
 			</div>
 		</div>
 	</div>
+	</div>
 
 
-    <footer class="my-footer d-flex justify-content-center align-items-center">
-        <div class="credits">
-            Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
-        </div>
-    </footer>
+	<footer class="my-footer d-flex justify-content-center align-items-center">
+		<div class="credits">
+			Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
+		</div>
+	</footer>
 
 	<!-- Vendor JS Files -->
 	<script src="assets/vendor/aos/aos.js"></script>
@@ -193,11 +135,14 @@
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
 
-
+	<script src="assets/js/firebaseConfig.js"></script>
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
 
 	<!--Home scripts-->
 	<script src="assets/js/home_search.js"></script>
+
+	<script src="assets/js/home.js"></script>
 </body>
+
 </html>

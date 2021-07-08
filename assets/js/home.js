@@ -7,12 +7,15 @@ function renderProject(doc){
     let name = document.createElement('td');
     let description = document.createElement('td');
     let status = document.createElement('td');
+    let a = document.createElement('a');
 
     tr.setAttribute('data-id', doc.id);
-    name.innerHTML = doc.data().name;
+    a.href = "iem.html";
+    a.innerHTML = doc.data().name;
     description.innerHTML = doc.data().description;
     status.innerHTML = doc.data().status;
-
+    
+    name.appendChild(a);
     tr.appendChild(name);
     tr.appendChild(description);
     tr.appendChild(status);

@@ -112,6 +112,10 @@ form{
     border: none;
 }
 
+.listOfProjects{
+    overflow: scroll;
+}
+
 /*footer*/
 .my-footer{
     position: absolute;
