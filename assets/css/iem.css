@@ -3,7 +3,10 @@
 *{
     font-family: 'Montserrat', sans-serif;
 }
-
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
 /*matrix*/
 .container-matrix{
     width: 100%;
@@ -23,6 +26,8 @@
     height: 49%;
     position: absolute;
     overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 #quad2.fullscreen{
     z-index: 9999; 
