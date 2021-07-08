@@ -24,6 +24,21 @@ form{
     background: #1acc8d;
     border: none;
 }
+.verify_green_button {
+    text-align: center;
+    width: 80%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 5px 30px;
+    
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1acc8d;
+    border: none;
+}
 .purple_button {
     text-align: center;
     width: 100%;
