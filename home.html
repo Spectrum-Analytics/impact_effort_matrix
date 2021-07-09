@@ -1,6 +1,8 @@
 <html lang="en">
 <head>
 
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +17,7 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
 	
+
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -42,7 +45,7 @@
 				<ul>
 				<li><a class="nav-link scrollto active" href="index.html">Home</a></li>
 				<li><a class="nav-link scrollto" href="employees.html">Employees</a></li>
-				<li><a class="nav-link scrollto" href="userProfile.html">User Profile</a></li>
+				<li><a class="nav-link scrollto" href="viewUserProfile.html">View User Profile</a></li>
 				<li><a class="nav-link scrollto" href="viewOrganisationProfile.html">Company Profile</a></li>
 				<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
 				</ul>
@@ -52,9 +55,9 @@
 	</header><!-- End Header -->
 
 	<section class="container">
-		<a class="home_green_button" data-toggle="modal" data-target="#createProjectModal" role="button" href="#createProjectModal">Create Project</a>
+		<a class="home_green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Create Project</a>
 		<div class="pt-3">
-			<input type="text" placeholder="Type here to search for projects" class="input-sm form-control" id="searchInput" onkeyup="home_search()">
+			<input style="border-radius: 25px;" type="text" placeholder="Type here to search for projects" class="input-sm form-control" id="searchInput" onkeyup="home_search()">
 		</div>
 	</section>
 	
@@ -137,30 +140,44 @@
 		</table>
 	</main>
 
-	<div class="modal fade" id="createProjectModal" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
+
+	<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
+
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
+
 				<div class="modal-header">
-					<h5 class="modal-title" id="setup_feedback">Create Project</h5>
+					<h5 class="modal-title" id="setup_feedback">Create New Project</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
+						<span aria-hidden="true">&times;</span>
 					</button>
+
 				</div>
-				<div class="modal-body">
+
+
+				<div class="modal-body" id="add-project-form">
 					<div style="margin: 10px;">
-						<input type="text" class="form-control" id="employeeName" placeholder="Project name">
+						<input type="text" class="form-control" id="orgName" name="name" placeholder="Project Name" value="">
 					</div>
 					<div style="margin: 10px;">
-						<textarea class="form-control name="ProjectDescription" id="ProjectDescription" placeholder="Project description"></textarea>
+						<textarea type="text" class="form-control" id="orgDes" name="description" placeholder="Project Description"
+							value=""></textarea>
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button class="red_button" data-dismiss="modal">Cancel</button>
-					<a href="#"><button type="button" class="modal_green_button">Create</button></a>
+					<input type="submit" value="Create Project" class="btn btn-primary rounded-pill"
+						style="background: rgb(25,28,147);">
 				</div>
+			</div>
+
+			<div class="modal-footer">
+				<button class="red_button" data-dismiss="modal">Cancel</button>
+				<a href="iem.html"><button type="button" class="modal_green_button">Create Project</button></a>
+			</div>
 			</div>
 		</div>
 	</div>
+
 
     <footer class="my-footer d-flex justify-content-center align-items-center">
         <div class="credits">
