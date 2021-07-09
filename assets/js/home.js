@@ -7,17 +7,57 @@ function renderProject(doc){
     let name = document.createElement('td');
     let description = document.createElement('td');
     let status = document.createElement('td');
+    let custom = document.createElement('td');
+    let a = document.createElement('a');
+
+    let iProfile = document.createElement('i');
+    let aProfile = document.createElement('a');
+
+    let iEdit = document.createElement('i');
+    let aEdit = document.createElement('a');
+
+    let iDelete = document.createElement('i');
+    let aDelete = document.createElement('a');
+   
 
     tr.setAttribute('data-id', doc.id);
-    name.innerHTML = doc.data().name;
+    a.href = "iem.html";
+    a.innerHTML = doc.data().name;
     description.innerHTML = doc.data().description;
     status.innerHTML = doc.data().status;
+
+    aProfile.href = "project.html";
+    aProfile.style.margin = "2px";
+    aProfile.className = "btn btn-primary btn-xs";
+    iProfile.className = "bi bi-person-plus-fill";
+
+    aEdit.href = "project.html";
+    aEdit.style.margin = "2px";
+    aEdit.className = "btn btn-info btn-xs";
+    iEdit.className = "bi bi-pencil-square";
+
+    aDelete.href = "project.html";
+    aDelete.style.margin = "2px";
+    aDelete.className = "btn btn-danger btn-xs";
+    iDelete.className = "bi bi-trash";
+
+    aProfile.appendChild(iProfile);
+    aEdit.appendChild(iEdit);
+    aDelete.appendChild(iDelete);
+
+    custom.appendChild(aProfile);
+    custom.appendChild(aEdit);
+    custom.appendChild(aDelete);
+
+    name.appendChild(a);
 
     tr.appendChild(name);
     tr.appendChild(description);
     tr.appendChild(status);
+    tr.appendChild(custom);
 
     projectList.appendChild(tr);
+
 
     // deleting data
     // cross.addEventListener('click', (e) => {
