@@ -8,11 +8,15 @@
 	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
     <link rel="stylesheet" href="assets/css/main.css">
+    
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -23,6 +27,7 @@
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/verification.css" rel="stylesheet">
 
     <title>Verify Account</title>
 </head>
@@ -44,8 +49,6 @@
           <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
           <li><a class="nav-link scrollto" href="index.html#pricing">Pricing</a></li>
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-          <li><a class="nav-link scrollto active" href="registration.html">Create Organisation</a></li>
-          <li><a class="nav-link scrollto" href="login.html">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -54,30 +57,32 @@
   </header><!-- End Header -->
 
     <main class="h-100 d-flex justify-content-center align-items-center">
+      <center>
         <div>
-            <div>
-                <h1>Verify Account</h1>
-            </div>
-            <form>
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
-                    </div>
-                </div>
-                <div class="form-row">
+          <h1>Verify Account</h1>
+          <h6><small>Enter the code sent your email</small></h6>
+          <form>
+             
+              <div class="form-row">
+                  <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2"> 
+                    <input class="m-2 text-center form-control rounded" type="text" id="input1" v-on:keyup="inputenter(1)" maxlength="1" /> 
+                    <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(2)" type="text" id="input2" maxlength="1" /> 
+                    <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(3)" type="text" id="input3" maxlength="1" /> 
+                    <input class="m-2 text-center form-control rounded" v-on:keyup="inputenter(4)" type="text" id="input4" maxlength="1" /> 
+                  </div>
                     <a class="green_button" role="button" href="addEmployees.html">Verify</a>
-                </div>
-            </form> 
-            <div class="form_question">
-                <p>
-                    Didn't recieve an email?
-                    <a href="">Send again</a>
-                </p>
-            </div>
-        </div>
+              </div>
+              
+          </form> 
+          <div class="form_question">
+              <p>
+                  Didn't recieve an email?
+                  <a href="">Send again</a>
+              </p>
+          </div>
+      </div>
+    </center>  
+      
     </main>
 
     <footer class="my-footer d-flex justify-content-center align-items-center">

@@ -29,14 +29,6 @@
     overflow-y: scroll;
     scrollbar-width: none;
 }
-#quad2.fullscreen{
-    z-index: 9999; 
-    width: 100%; 
-    height: 100%; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
- }
 .quad-heading{
     text-align: center;
     margin: 5px 0;
@@ -52,6 +44,14 @@
     top: 0;
     right: 0;
 }
+#quad2.fullscreen{
+    z-index: 9999; 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
 .quadrant-3{
     background-color: #6293f0;
     bottom: 0;
@@ -64,12 +64,12 @@
 }
 
 /*Expand quadrant screen*/
-#expand_button{
+.expand_button{
     position: absolute;
     bottom: 3;
     right: 3;
     border: none;
-    background-color: rgba(245, 222, 179, 0);
+    background-color: rgba(0,0,0,0);
 }
 
 /*features*/
@@ -106,7 +106,6 @@
     text-align: center;
     opacity: 50%;
 }
-
 .feature-bottom{
     overflow: hidden;
     height: 10%;
@@ -116,7 +115,6 @@
     position: static;
 
 }
-
 #add-feature-content{
     height: 100%;
     width: 100%;
@@ -155,6 +153,13 @@
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 1px;
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1acc8d;
+    border: none;
 }
 #feature-tip{
     margin: 10px;
@@ -185,3 +190,12 @@
     background: #be0000;
     border: none;
 }
+<<<<<<< HEAD
+=======
+
+li {
+    display: inline-block;
+    margin: 10 10 10px ;
+
+  }
+>>>>>>> master

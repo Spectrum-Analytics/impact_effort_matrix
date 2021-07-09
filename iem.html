@@ -29,7 +29,6 @@
     <title>IEM</title>
 </head>
 <body>
-
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
     
@@ -45,14 +44,23 @@
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
-    
         </div>
-    </header><!-- End Header -->
+    </header>
+    <!-- End Header -->
+    <main class="h-100 d-flex justify-content-center align-items-center"> 
 
-
-    <main class="h-100 d-flex justify-content-center align-items-center">
-        <div class="container container-matrix">
+         <div class="container container-matrix">
+         <!--    <ul>
+                <li> <p>PROJECT NAME</p></li>  
+                <li> <p>PROJECT FACILITATOR</p></li> 
+                <li><a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a></li>
+             </ul> -->
             <div class="matrix">
+                <ul>
+                    <li> <p>PROJECT NAME</p></li>  
+                    <li> <p>PROJECT FACILITATOR</p></li> 
+                    <li><a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a></li>
+                 </ul>
                 <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div>
                         <p class="quad-heading">High Impact/Low Effort</p>
@@ -76,7 +84,7 @@
             </div>
             <div class="features">
                 <div class="feature-head">
-                    <h2>Features</h2>
+                    <h2>Features</h2> 
                 </div>
                 <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList">
 
@@ -84,7 +92,6 @@
                 <div class="feature-bottom">
                     <div>
                         <button type="button" id="add-feature-button" data-toggle="modal" data-target="#addFeatureModal" class="green_button">Add feature</button>
-                        
                         <!-- add feature modal-->
                         <div class="modal fade" id="addFeatureModal" tabindex="-1" role="dialog" aria-labelledby="addFeatureModalTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -110,7 +117,7 @@
         </div>
     </main>
 
-    <footer class="my-footer d-flex justify-content-center align-items-center">
+     <footer class="my-footer d-flex justify-content-center align-items-center">
         <div class="credits">
             Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
         </div>
