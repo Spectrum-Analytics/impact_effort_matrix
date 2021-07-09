@@ -384,6 +384,26 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+#account_green_button {
+  /* margin: 5px; */
+  padding: 5px 30px;
+  color:#fff;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 50px;
+  background-color: #1acc8d;
+  border: none;
+  transition: 0.3s;
+}
+
+/* h1{
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+} */
+
+#input{
+  width: 300px;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
