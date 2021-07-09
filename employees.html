@@ -1,44 +1,53 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-	
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
 
-    <title>Employees</title>
+	<title>Employees</title>
 </head>
+
 <body>
-    <!-- ======= Header ======= -->
+
+	<!-- ======= Header ======= -->
 	<header id="header" class="d-flex align-items-center">
 		<div class="container d-flex align-items-center justify-content-between">
 			<div class="logo">
 				<h1><a href="index.html"><span>Impact Effort Matrix</span></a></h1>
 				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 			</div>
+
 			<nav id="navbar" class="navbar">
 				<ul>
 				<li><a class="nav-link scrollto" href="home.html">Home</a></li>
-				<li><a class="nav-link scrollto active" href="#">Employees</a></li>
-				<li><a class="nav-link scrollto" href="viewUserProfile.html">View User Profile</a></li>
+				<li><a class="nav-link scrollto active" href="employees.html">Employees</a></li>
+				<li><a class="nav-link scrollto" href="viewUserProfile.html">User Profile</a></li>
 				<li><a class="nav-link scrollto" href="viewOrganisationProfile.html">Company Profile</a></li>
 				<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
 				</ul>
@@ -47,14 +56,14 @@
 		</div>
 	</header><!-- End Header -->
 
-	<section class="container">
-		<a class="home_green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Add employee</a>
-		<div class="pt-3">
-			<input type="text" placeholder="Type here to search for employees" class="input-sm form-control" id="searchInput" onkeyup="home_search()">
+	<main class="container mt-4">
+		<div class="position_right">
+			<a class="edit_green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Add Employee</a>
 		</div>
-	</section>
-	
-	<main class="container">
+		<div class="pt-3">
+			<input type="text" placeholder="Type here to search for employees"
+				class="input-sm form-control" id="searchInput" onkeyup="home_search()">
+		</div>
 		<table class="table table-hover p-table container" id="listOfProjects">
 			<thead>
 				<tr class="header">
@@ -114,6 +123,7 @@
 		</table>
 	</main>
 
+
 	<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
@@ -133,17 +143,18 @@
 			</div>
 			<div class="modal-footer">
                 <button class="red_button" data-dismiss="modal">Cancel</button>
-				<a href="#"><button type="button" class="modal_green_button">Add employee</button></a>
+				<a href="#"><button type="button" class="modal_green_button">Add</button></a>
 			</div>
 			</div>
 		</div>
 	</div>
 
-    <footer class="my-footer d-flex justify-content-center align-items-center">
-        <div class="credits">
-            Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
-        </div>
-    </footer>
+
+	<footer class="my-footer d-flex justify-content-center align-items-center">
+		<div class="credits">
+			Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
+		</div>
+	</footer>
 
 	<!-- Vendor JS Files -->
 	<script src="assets/vendor/aos/aos.js"></script>
@@ -152,11 +163,14 @@
 	<script src="assets/vendor/php-email-form/validate.js"></script>
 	<script src="assets/vendor/purecounter/purecounter.js"></script>
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
+	<script src="assets/js/firebaseConfig.js"></script>
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
-
 	<!--Home scripts-->
 	<script src="assets/js/home_search.js"></script>
+
+	<script src="assets/js/home.js"></script>
+
 </body>
+
 </html>
