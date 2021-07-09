@@ -4,46 +4,55 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>Profile</title>
-	<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
-	<link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
-	<link rel="stylesheet" href="assets/css/smoothproducts.css">
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="assets/css/iem.css">
+	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/profile_style.css">
+
+
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<title>Profile | Project</title>
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-light navbar-expand-lg  clean-navbar" style="background: rgb(25,28,147);">
-			<div class="container"><a class="navbar-brand logo" href="#" style="color: rgb(255,255,255);">Impact Effort
-					Matrix</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span
-						class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-				<div class="collapse navbar-collapse" id="navcol-1" style="color: rgb(243,246,249);">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item"><a class="nav-link" href="home.html" style="color: rgb(239,239,239);">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="userProfile.html"
-								style="color: rgb(247,245,245);">Profile</a></li>
-						<li class="nav-item"><a class="nav-link" href="iem.html" style="color: rgb(239,239,239);">Project</a></li>
-						<li class="nav-item"><a class="nav-link" href="index.html" style="color: rgb(239,239,239);">Logout</a></li>
-					</ul>
-				</div>
+	<!-- ======= Header ======= -->
+	<header id="header" class="d-flex align-items-center">
+		<div class="container d-flex align-items-center justify-content-between">
+			<div class="logo">
+				<h1><a href="index.html"><span>Impact Effort Matrix</span></a></h1>
+				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 			</div>
-		</nav>
-	</header>
-<br>
-<br>
-	<div class="container">
-
-		<!-- Breadcrumb -->
-	<!-- 	<nav aria-label="breadcrumb" class="main-breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="home.html">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Project Settings</li>
-			</ol>
-		</nav> -->
-		<!-- /Breadcrumb -->
-
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a class="nav-link scrollto" href="home.html">Home</a></li>
+					<li><a class="nav-link scrollto" href="employees.html">Employees</a></li>
+					<li><a class="nav-link scrollto" href="userProfile.html">User Profile</a></li>
+					<li><a class="nav-link scrollto" href="viewOrganisationProfile.html">Company Profile</a></li>
+					<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav><!-- .navbar -->
+		</div>
+	</header><!-- End Header -->
+	<div class="container mt-3">
 		<div class="row gutters-sm">
 			<div class="col-md-4 d-none d-md-block">
 				<div class="card">
@@ -84,22 +93,23 @@
 							<form>
 								<div class="form-group">
 									<label for="projectName">Project Name</label>
-									<input type="text" class="form-control" id="projectName" aria-describedby="projectName"
-										placeholder="Project Name" value="">
+									<input type="text" class="form-control" id="projectName"
+										aria-describedby="projectName" placeholder="Project Name" value="IEM">
 									<small id="fullNameHelp" class="form-text text-muted">The project name may appear
 										around here where
 										you are mentioned. You can change or remove it at any time.</small>
 								</div>
 								<div class="form-group">
 									<label for="projectDes">Project Description</label>
-									<textarea type="text" class="form-control" id="projectDes" aria-describedby="projectDes"
-										placeholder="Project Description" value=""></textarea>
+									<textarea type="text" class="form-control" id="projectDes"
+										aria-describedby="projectDes" placeholder="Project Description"
+										value="Impact Effort Matrix"></textarea>
 									<small id="projectDes" class="form-text text-muted">The description may appear
 										around here where you
 										are mentioned. You can change or remove it at any time.</small>
 								</div>
-								<button type="button" class="btn btn-primary rounded-pill" style="background: rgb(25,28,147);">Update Project Info</button>
-								<button type="reset" class="btn btn-light rounded-pill">Reset Changes</button>
+								<button type="button" class="edit_green_button">Update Project</button>
+								<button type="reset" class="reset_red_button">Reset Changes</button>
 							</form>
 						</div>
 						<div class="tab-pane" id="participants">
@@ -133,8 +143,8 @@
 									</tbody>
 								</table>
 								<!-- Trigger the modal with a button -->
-								<a class="btn btn-primary rounded-pill" data-toggle="modal" data-target="#myModal" role="button"
-									href="#myModal" style="background: rgb(25,28,147);">Add</a>
+								<a class="edit_green_button" data-toggle="modal" data-target="#myModal" role="button"
+									href="#myModal">Add</a>
 
 								<!-- Modal -->
 								<div class="modal fade" id="myModal" role="dialog">
@@ -143,7 +153,8 @@
 										<!-- Modal content-->
 										<div class="modal-content">
 											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal">&times;</button>
+												<button type="button" class="close"
+													data-dismiss="modal">&times;</button>
 												<h4 class="modal-title">Project Participants</h4>
 											</div>
 											<div class="modal-body">
@@ -151,8 +162,10 @@
 
 											</div>
 											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">Invite</button>
-												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button type="button" class="edit_green_button"
+													data-dismiss="modal">Invite</button>
+												<button type="button" class="reset_red_button"
+													data-dismiss="modal">Close</button>
 											</div>
 										</div>
 
@@ -170,41 +183,37 @@
 										back. Please be
 										certain.</p>
 								</div>
-								<a class="btn btn-danger rounded-pill" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Delete Project</a>
+								<a class="reset_red_button" data-toggle="modal" data-target="#feedback" role="button"
+									href="#feedback">Delete Project</a>
 							</form>
 						</div>
 					</div>
 				</div>
 
 			</div>
-			<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle" aria-hidden="true">
+			<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="feedack_CenterTitle"
+				aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered" role="document">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title" id="setup_feedback">Are you absolutely sure?</h5>
-					  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					  </button>
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="setup_feedback">Are you absolutely sure?</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							This will permanently delete your project
+							<p> Please type your project name to confirm.</p>
+						</div>
+						<div style="margin: 10px;">
+							<input type="text" class="form-control" id="orgName" placeholder="Project Name" value="">
+						</div>
+						<div class="modal-footer">
+							<a href="project.html"><button type="button" class="reset_red_button">Confirm
+									Delete</button></a>
+						</div>
 					</div>
-					<div class="modal-body">
-						This will permanently delete your project
-						<p> Please type your project name to confirm.</p>
-					</div>
-					<div style="margin: 10px;">
-						<input type="text" class="form-control" id="orgName" placeholder="Project Name" value="">
-					</div>
-					<div class="modal-footer">
-					  <a href="project.html"><button type="button" class="btn btn-danger rounded-pill" >Confirm Delete</button></a>
-					</div>
-				  </div>
 				</div>
-			  </div>
-
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
-			<script src="assets/js/smoothproducts.min.js"></script>
-			<script src="assets/js/theme.js"></script>
+			</div>
 </body>
-
 </html>
