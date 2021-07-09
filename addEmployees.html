@@ -64,11 +64,12 @@
                     
                     <div class="row">
                       <div class="col">
-                        <button class="purple_button">Upload file</button>
+                        <label for="fileUpload" class="purple_button">Upload file </label>  
+                        <input type="file" id="fileUpload" />
                       </div>
-                      <div class="col">
-                        <a class="green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Complete</a>
-                      </div>
+                      <div class="col"><a class="green_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Complete</a></div>
+                      
+                        
                     </div>
                     
                 </form> 
@@ -79,6 +80,7 @@
                     </p>
             </div>
         </center>
+        <script src="assets/js/fileUpload.js"></script>
     </main>
 
     <!-- Add employees confirmation modal -->
@@ -117,6 +119,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  
 
   <!--IEM scripts-->
   <script src="assets/js/add_feature.js"></script>

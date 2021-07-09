@@ -13,6 +13,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/iem.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/profile_style.css">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -39,29 +41,27 @@
 				<ul>
 				<li><a class="nav-link scrollto" href="home.html">Home</a></li>
 				<li><a class="nav-link scrollto" href="employees.html">Employees</a></li>
-				<li><a class="nav-link scrollto active" href="userProfile.html">User Profile</a></li>
-				<li><a class="nav-link scrollto" href="orgProfile.html">Company Profile</a></li>
+				<li><a class="nav-link scrollto" href="userProfile.html">User Profile</a></li>
+				<li><a class="nav-link scrollto" href="viewOrganisationProfile.html">Company Profile</a></li>
 				<li><a class="nav-link scrollto" href="index.html">Logout</a></li>
 				</ul>
 				<i class="bi bi-list mobile-nav-toggle"></i>
 			</nav><!-- .navbar -->
 		</div>
 	</header><!-- End Header -->
-
-
-    <main class="container">
+    <main class="container mt-3">
       <div class="row gutters-sm">
         <div class="col-md-4 d-none d-md-block">
           <div class="card">
             <div class="card-body">
               <nav class="nav flex-column nav-pills nav-gap-y-1">
-                <a href="#profile" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded active">
+                <a href="#profile" data-toggle="tab" class="nav-item nav-link nav-link-faded active">
                   Profile Information
                 </a>
-                <a href="#account" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                <a href="#account" data-toggle="tab" class="nav-item nav-link nav-link-faded">
                   Account Settings
                 </a>
-                <a href="#security" data-toggle="tab" class="nav-item nav-link has-icon nav-link-faded">
+                <a href="#security" data-toggle="tab" class="nav-item nav-link nav-link-faded">
                   Security
                 </a>
               </nav>
@@ -73,13 +73,13 @@
             <div class="card-header border-bottom mb-3 d-flex d-md-none">
               <ul class="nav nav-tabs card-header-tabs nav-gap-x-1" role="tablist">
                 <li class="nav-item">
-                  <a href="#profile" data-toggle="tab" class="nav-link has-icon active"></a>
+                  <a href="#profile" data-toggle="tab" class="nav-link active"></a>
                 </li>
                 <li class="nav-item">
-                  <a href="#account" data-toggle="tab" class="nav-link has-icon"></a>
+                  <a href="#account" data-toggle="tab" class="nav-link"></a>
                 </li>
                 <li class="nav-item">
-                  <a href="#security" data-toggle="tab" class="nav-link has-icon"></a>
+                  <a href="#security" data-toggle="tab" class="nav-link"></a>
                 </li>
               </ul>
             </div>
@@ -92,24 +92,24 @@
                   <div class="form-group">
                     <label for="username">Username</label>
                     <input type="text" class="form-control" id="username" aria-describedby="usernameHelp"
-                      placeholder="Enter your username" value="">
+                      placeholder="Enter your username" value="aubrey97">
                     <small id="usernameHelp" class="form-text text-muted">After changing your username, your old username
                       becomes available for anyone else to claim.</small>
                   </div>
                   <div class="form-group">
                     <label for="fullName">Full Name</label>
                     <input type="text" class="form-control" id="fullName" aria-describedby="fullNameHelp"
-                      placeholder="Enter your fullname" value="">
+                      placeholder="Enter your fullname" value="Aubrey Johnson">
                     <small id="fullNameHelp" class="form-text text-muted">Your name may appear around here where you are
                       mentioned. You can change or remove it at any time.</small>
                   </div>
                   <div class="form-group">
                     <label for="url">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="@gmail.com" value="">
+                    <input type="email" class="form-control" id="email" placeholder="@gmail.com" value="aubrey@spectrum">
                   </div>
-                  <button type="button" class="btn btn-primary rounded-pill" style="background: rgb(25,28,147);">Update
-                    Profile</button>
-                  <button type="reset" class="btn btn-light rounded-pill">Reset Changes</button>
+                  <a class="edit_green_button">Update
+                    Profile</a>
+                  <button type="reset" class="reset_red_button">Reset changes</button>
                 </form>
               </div>
               <div class="tab-pane" id="account">
@@ -124,7 +124,7 @@
                         certain.</p>
 
                 </div>
-        <a class="btn btn-danger rounded-pill" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Delete Account</a>
+        <a class="reset_red_button" data-toggle="modal" data-target="#feedback" role="button" href="#feedback">Delete Account</a>
                 </form>
               </div>
               <div class="tab-pane" id="security">
@@ -137,8 +137,7 @@
                     <input type="text" class="form-control mt-1" placeholder="New password">
                     <input type="text" class="form-control mt-1" placeholder="Confirm new password">
                     <hr>
-                    <button type="button" class="btn btn-primary rounded-pill"
-                      style="background: rgb(25,28,147);">Update</button>
+                    <button type="reset" class="reset_red_button">Reset changes</button>
                   </div>
                 </form>
               </div>
@@ -165,7 +164,7 @@
                   <input type="text" class="form-control" id="orgName" placeholder="username" value="">
               </div>
               <div class="modal-footer">
-                <a href="userProfile.html"><button type="button" class="btn btn-danger rounded-pill" >Confirm Delete</button></a>
+                <a href="userProfile.html"><button type="button" class="reset_red_button">Confirm Delete</button></a>
               </div>
 
             </div>
