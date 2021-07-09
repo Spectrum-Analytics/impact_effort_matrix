@@ -1,10 +1,12 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
 
     <!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -14,9 +16,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="assets/css/iem.css">
-
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,8 +23,8 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/iem.css">
 
     <title>IEM</title>
 </head>
@@ -71,8 +70,6 @@
                     <div>
                         <p class="quad-heading">High Impact/High Effort</p>
                     </div>
-
-                    <button id="q2_expand_button" class="bi bi-arrows-fullscreen expand_button"></button>
                 </div>
                 <div id="quad3" class="quadrant-3 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div>
@@ -89,15 +86,8 @@
                 <div class="feature-head">
                     <h2>Features</h2> 
                 </div>
-                <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="features">
-                    <div>
-                        <p id="feature-body-instruction">Drag and drop features to the quadrants</p>
+                <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList">
 
-                    </div>
-                    <div class="my-feature" id="drag1" draggable="true" ondragstart="drag(event)">Create Organisation</div>
-                    <div class="my-feature" id="drag2" draggable="true" ondragstart=" drag(event)">Add Employees</div>
-                    <div class="my-feature" id="drag3" draggable="true" ondragstart="drag(event)">Create Project</div>
-                    <div class="my-feature" id="drag4" draggable="true" ondragstart="drag(event)">Add Participants</div>
                 </div>
                 <div class="feature-bottom">
                     <div>
@@ -110,13 +100,14 @@
                                     <h5 class="modal-title" id="exampleModalLongTitle">Add Feature</h5>
                                 </div>
                                 <div class="modal-body">
-                                    <div id="add-feature-input-field">
-                                        <textarea name="" id="add-feature-content" onkeydown="if (event.keyCode == 13)document.getElementById('add-feature-button').click()" placeholder="feature"></textarea>
-                                    </div>
+                                    <form id="addFeatureForm">
+                                        <input type="text" name="AddFeatureContent" placeholder="feature">
+                                        <button type="submit" class="green_button">Save changes</button>
+                                    </form>
                                 </div>
                                 <div class="modal-footer">
-                                <button type="button" class="red_button" data-dismiss="modal">Close</button>
-                                <button type="button" class="green_button" onclick="addFeature()" data-dismiss="modal">Save changes</button>
+                                        <button type="button" class="red_button" data-dismiss="modal">Close</button>
+                                        
                                 </div>
                             </div>
                             </div>
@@ -130,24 +121,26 @@
         <div class="credits">
             Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
         </div>
-    </footer> 
+    </footer>
+    
+    <script src="assets/js/firebaseConfig.js"></script>
+    <script src="assets/js/iem/features.js"></script>
+    <script src="assets/js/iem/drag_and_drop.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!--IEM scripts-->
+ 
+    <script src="assets/js/iem/expand_quadrants.js"></script>
 
-  <!--IEM scripts-->
-  <script src="assets/js/add_feature.js"></script>
-  <script src="assets/js/drag_and_drop.js"></script>
-  <script src="assets/js/expand_quadrants.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </body>
 
 </html>
