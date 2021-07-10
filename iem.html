@@ -53,17 +53,8 @@
     <main class="h-100 d-flex justify-content-center align-items-center"> 
 
          <div class="container container-matrix">
-         <!--    <ul>
-                <li> <p>PROJECT NAME</p></li>  
-                <li> <p>PROJECT FACILITATOR</p></li> 
-                <li><a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a></li>
-             </ul> -->
+ 
             <div class="matrix">
-                <ul>
-                    <li> <p>PROJECT NAME</p></li>  
-                    <li> <p>PROJECT FACILITATOR</p></li> 
-                    <li><a href="project.html" class="btn btn-primary btn-xs"><i class="bi bi-person-plus-fill"></i></a></li>
-                 </ul>
                 <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div>
                         <p class="quad-heading">High Impact/Low Effort</p>
@@ -81,7 +72,7 @@
                 </div>
                 <div id="quad4" class="quadrant-4 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div>
-                        <p class="quad-heading">High Effort/Impact</p>
+                        <p class="quad-heading">High Effort/ Low Impact</p>
                     </div>
                 </div>
             </div>
@@ -98,23 +89,25 @@
                         <!-- add feature modal-->
                         <div class="modal fade" id="addFeatureModal" tabindex="-1" role="dialog" aria-labelledby="addFeatureModalTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Add Feature</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Add Feature</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="add-feature-form">
+                                            <div class="form-group">
+                                                <textarea name="content" class="form-control" placeholder="Feature"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="red_button" data-dismiss="modal">Close</button>
+                                                <button class="green_button" role="button">Add</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <form id="addFeatureForm">
-                                        <textarea name="AddFeatureContent" placeholder="feature" style="width: 100%;"></textarea>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="red_button" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="green_button">Add</button>    
-                                </div>
-                            </div>
                             </div>
                         </div>
                 </div>
