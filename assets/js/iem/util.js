@@ -1,0 +1,3 @@
+/*
+This document holds utility functions
+*/

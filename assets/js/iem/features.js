@@ -1,12 +1,13 @@
 //TODO : Apply SOLID principles.
 
-const featureList = document.querySelector('#featuresList');
-const addFeatureForm = document.querySelector('#addFeatureForm');
+const featureList = document.querySelector('#featuresList'); // default list to place feautures
+const addFeatureForm = document.querySelector('#add-feature-form');
 
-const quad1 = document.querySelector('#quad1');
-const quad2 = document.querySelector('#quad2');
-const quad3 = document.querySelector('#quad3');
-const quad4 = document.querySelector('#quad4');
+//The matrix quadrants.
+const quad1 = document.querySelector('#quad1');// high impact|low effort.
+const quad2 = document.querySelector('#quad2');// high impact|high effort.
+const quad3 = document.querySelector('#quad3');// low impact|low effort.
+const quad4 = document.querySelector('#quad4');// high effort|low effort.
 
 //render feature from firestore to the iem.
 function renderFeatures(doc) {
@@ -14,6 +15,7 @@ function renderFeatures(doc) {
     let featureContent = document.createElement('span');
     //set feature attribures
     feature.setAttribute('data-id',doc.id);
+
     //make element draggable.
     feature.id = doc.id;
     feature.draggable = true;
@@ -49,10 +51,10 @@ addFeatureForm.addEventListener(
     'submit',(e)=>{
       e.preventDefault();
       db.collection('Feature').add({
-          content: addFeatureForm.featureContent.value,
+          content: addFeatureForm.content.value,
           quadId : 0
       }); 
-      addFeatureForm.featureContent.value = '';
+      addFeatureForm.content.value = '';
     }
 );
 
