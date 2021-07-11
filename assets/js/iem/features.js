@@ -1,4 +1,4 @@
-//TODO : Apply SOLID principles.
+
 
 const featureList = document.querySelector('#featuresList'); // default list to place feautures
 const addFeatureForm = document.querySelector('#add-feature-form');
@@ -11,26 +11,43 @@ const quad4 = document.querySelector('#quad4');// high effort|low effort.
 
 //render feature from firestore to the iem.
 function renderFeatures(doc) {
-    let feature = document.createElement('div');
+
+    let feature = makeFeature(doc);
     let featureContent = document.createElement('span');
-    //set feature attribures
-    feature.setAttribute('data-id',doc.id);
-
-    //make element draggable.
-    feature.id = doc.id;
-    feature.draggable = true;
-    feature.setAttribute('ondragstart',"drag(event)");
-    feature.classList.add('my-feature');
-
+    
     //get quadrant id.
-    var quadId = doc.data().quadId;
+    let quadId = getFeature(doc).quadId;
 
     //getting the content.
-    featureContent.textContent = doc.data().content;
+    featureContent.textContent = getFeature(doc).featureContent;
 
+    pushFeatureToQuads(quadId,feature);
     //add feature content to feature div
     feature.appendChild(featureContent);
+}
 
+function getFeature(doc) {
+    // get the feature content and quadId from firestore.
+    let featureContent = doc.data().content,
+        quadId = doc.data().quadId;
+
+    // return content and quadId.
+    return {featureContent, quadId};
+}
+
+function setFeatureAttributes(feature,doc) {
+    feature.id = doc.id;
+    feature.classList.add('my-feature');
+    feature.setAttribute('data-id',doc.id);
+}
+
+function makeFeatureDraggable(feature) {
+    //make feature element draggable
+    feature.draggable = true;
+    feature.setAttribute('ondragstart',"drag(event)");
+}
+
+function pushFeatureToQuads(quadId,feature) {
     //add the feature to the right quadrant.
     if (quadId==0) {
         featureList.appendChild(feature);
@@ -43,7 +60,18 @@ function renderFeatures(doc) {
     }else if (quadId==4) {
         quad4.appendChild(feature);
     }
-    
+}
+
+function makeFeature(doc) {
+    //create a feauture element that will be rendered on the browser.
+    let feature = document.createElement('div');
+    //set feature attribures
+    setFeatureAttributes(feature,doc);
+
+    //make element draggable.
+    makeFeatureDraggable(feature);
+
+    return feature;
 }
 
 // add data to firestore.
