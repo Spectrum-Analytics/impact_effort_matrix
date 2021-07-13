@@ -18,12 +18,37 @@ function renderFeatures(doc) {
     //get quadrant id.
     let quadId = getFeature(doc).quadId;
 
+    let cross = makeCross();
+
+    let edit = makeUpdate();
+
     //getting the content.
     featureContent.textContent = getFeature(doc).featureContent;
+
+    // feature.textContent = doc.data().content;
 
     pushFeatureToQuads(quadId,feature);
     //add feature content to feature div
     feature.appendChild(featureContent);
+
+    feature.appendChild(edit);
+    //add cross to feature div
+
+    feature.appendChild(cross);
+
+    // deleting data
+    cross.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id');
+        db.collection('Feature').doc(id).delete();
+    });
+
+    edit.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id');
+        var newData = document.getElementById(id).childNodes[0].textContent;
+        db.collection('Feature').doc(id).update({content: newData});
+    });
 }
 
 function getFeature(doc) {
@@ -38,6 +63,7 @@ function getFeature(doc) {
 function setFeatureAttributes(feature,doc) {
     feature.id = doc.id;
     feature.classList.add('my-feature');
+    feature.contentEditable = "true";
     feature.setAttribute('data-id',doc.id);
 }
 
@@ -63,7 +89,7 @@ function pushFeatureToQuads(quadId,feature) {
 }
 
 function makeFeature(doc) {
-    //create a feauture element that will be rendered on the browser.
+    //create a feature element that will be rendered on the browser.
     let feature = document.createElement('div');
     //set feature attribures
     setFeatureAttributes(feature,doc);
@@ -72,6 +98,22 @@ function makeFeature(doc) {
     makeFeatureDraggable(feature);
 
     return feature;
+}
+
+function makeCross(){
+    let cross = document.createElement('div');
+    cross.contentEditable = "false";
+    cross.textContent = 'x';
+
+    return cross;
+}
+
+function makeUpdate(){
+    let edit = document.createElement('i');
+    edit.className = "bi bi-pencil-square";
+    edit.contentEditable = "false";
+
+    return edit;
 }
 
 // add data to firestore.
@@ -86,18 +128,24 @@ addFeatureForm.addEventListener(
     }
 );
 
-// real time listener.
-db.collection('Feature').onSnapshot(
-    snapshot =>{
-        let changes = snapshot.docChanges();
-        changes.forEach(change => {
-            console.log(change.doc.data());
-            if (change.type=='added') {
-                renderFeatures(change.doc);
-            }else if (change.type == 'removed') {
-                let li = featureList.querySelector('data-id='+ change.doc.id +']');
-                //featureList.removeChild(li);
-            }
-        });
-    }
-);
+// real-time listener
+db.collection('Feature').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        console.log(change.doc.data());
+        if(change.type == 'added'){
+            renderFeatures(change.doc);
+        } else if (change.type == 'removed'){
+            let feature = featuresList.querySelector('[data-id=' + change.doc.id + ']');
+            featuresList.removeChild(feature);
+            // let quadOne = quad1.querySelector('[data-id=' + change.doc.id + ']');
+            // quad1.removeChild(quadOne);
+            // let quadTwo = quad2.querySelector('[data-id=' + change.doc.id + ']');
+            // quad2.removeChild(quadTwo);
+            // let quadThree = quad3.querySelector('[data-id=' + change.doc.id + ']');
+            // quad3.removeChild(quadThree);
+            // let quadFour = quad4.querySelector('[data-id=' + change.doc.id + ']');
+            // quad4.removeChild(quadFour);
+        }
+    });
+});
