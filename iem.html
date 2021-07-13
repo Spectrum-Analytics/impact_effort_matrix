@@ -10,19 +10,12 @@
 
     <!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/iem.css">
 
@@ -50,64 +43,64 @@
         </div>
     </header>
     <!-- End Header -->
-    <main class="h-100 d-flex justify-content-center align-items-center"> 
-        
-         <div class="container container-matrix">
 
-            <div class=" container project-details">
-                <ul id="project-details">
-                    <li><a class="btn btn-primary btn-xs" href="project.html"><i  class="bi bi-person-plus-fill"></i></a></li>
-                </ul>
-             </div>
-
-            <div class="matrix">
-                <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">High Impact/Low Effort</p>
-                </div>
-                <div id="quad2" class="quadrant-2 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">High Impact/High Effort</p>
-                </div>
-                <div id="quad3" class="quadrant-3 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">Low Impact/Low Effort</p>
-                </div>
-                <div id="quad4" class="quadrant-4 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">High Effort/ Low Impact</p>
-                </div>
+    <main class="h-100 d-flex justify-content-center align-items-center mt-2"> 
+        <div class="container">
+            <div id="project-details">
+                <a class="btn btn-xs" href="project.html"><i  class="bi-person-plus-fill"></i></a>
             </div>
-            <div class="features">
-                <div class="feature-head">
-                    <h2>Features</h2> 
+    
+            <div class="container-matrix">
+    
+                <div class="matrix">
+                    <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">High Impact/Low Effort</p>
+                    </div>
+                    <div id="quad2" class="quadrant-2 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">High Impact/High Effort</p>
+                    </div>
+                    <div id="quad3" class="quadrant-3 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">Low Impact/Low Effort</p>
+                    </div>
+                    <div id="quad4" class="quadrant-4 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">High Effort/ Low Impact</p>
+                    </div>
                 </div>
-                <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList">
-
-                </div>
-                <div class="feature-bottom">
-                    <div>
-                        <button type="button" id="add-feature-button" data-toggle="modal" data-target="#addFeatureModal" class="green_button">Add feature</button>
-                        <!-- add feature modal-->
-                        <div class="modal fade" id="addFeatureModal" tabindex="-1" role="dialog" aria-labelledby="addFeatureModalTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Add Feature</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form id="add-feature-form">
-                                            <div class="form-group">
-                                                <textarea name="content" class="form-control" placeholder="Feature"></textarea>
-                                            </div>
-                                            <div class="form-group">
-                                                <button class="red_button" data-dismiss="modal">Close</button>
-                                                <button class="green_button" role="button">Add</button>
-                                            </div>
-                                        </form>
+                <div class="features">
+                    <div class="feature-head">
+                        <h2>Features</h2> 
+                    </div>
+                    <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList">
+    
+                    </div>
+                    <div class="feature-bottom">
+                        <div>
+                            <button type="button" id="add-feature-button" data-toggle="modal" data-target="#addFeatureModal" class="green_button">Add feature</button>
+                            <!-- add feature modal-->
+                            <div class="modal fade" id="addFeatureModal" tabindex="-1" role="dialog" aria-labelledby="addFeatureModalTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Add Feature</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form id="add-feature-form">
+                                                <div class="form-group">
+                                                    <textarea name="content" class="form-control" placeholder="Feature"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button class="red_button" data-dismiss="modal">Close</button>
+                                                    <button class="green_button" role="button">Add</button>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,7 +128,6 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/home.js"></script>
     
 	<script src="assets/js/jquery.min.js"></script>
 </body>
