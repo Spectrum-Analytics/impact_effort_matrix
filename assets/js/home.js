@@ -21,7 +21,7 @@ function renderProject(doc){
    
 
     tr.setAttribute('data-id', doc.id);
-    a.href = "iem.html";
+    a.href = "iem.html?name="+ doc.data().name; 
     a.innerHTML = doc.data().name;
     description.innerHTML = doc.data().description;
     status.innerHTML = doc.data().status;
