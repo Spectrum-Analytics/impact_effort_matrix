@@ -5,12 +5,13 @@ function renderemployees(doc) {
     let employeeName = document.createElement('span');
     let cross = document.createElement('div');
 
-    li.setAttribute('data-id',doc.id);
+    //li.setAttribute('data-id',doc.id);
+    li.id = doc.id;
     li.classList.add('employee');
     employeeName.textContent = doc.data().name;
     //cross.textContent = 'x';
     cross.id = "cross";
-    cross.classList.add("bi", "bi-three-dots-vertical");
+    cross.classList.add("bi", "bi-trash");
 
     li.appendChild(employeeName);
     li.appendChild(cross);
@@ -20,7 +21,7 @@ function renderemployees(doc) {
     //deleting data from firestore.
     cross.addEventListener('click',(e)=>{
         e.stopPropagation();
-        let id = e.target.parentElement.getAttribute('data-id');
+        let id = e.target.parentElement.id;
         db.collection('User').doc(id).delete();
     });
 }
@@ -31,9 +32,10 @@ addEmployeesForm.addEventListener(
       e.preventDefault();
       db.collection('User').add({
           name: addEmployeesForm.name.value,
-          city: addEmployeesForm.city.value
+          email: addEmployeesForm.email.value
       }); 
       addEmployeesForm.name.value = '';
+      addEmployeesForm.email.value = '';
     }
 );
 
@@ -42,11 +44,10 @@ db.collection('User').onSnapshot(
     snapshot =>{
         let changes = snapshot.docChanges();
         changes.forEach(change => {
-            console.log(change.doc.data());
             if (change.type=='added') {
                 renderemployees(change.doc);
             }else if (change.type == 'removed') {
-                let li = employeesList.querySelector('data-id='+ change.doc.id +']');
+                let li = employeesList.querySelector('#'+ change.doc.id);
                 employeesList.removeChild(li);
             }
         });

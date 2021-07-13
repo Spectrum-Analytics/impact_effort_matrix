@@ -1,23 +1,19 @@
-function home_search(listOfElements) {
+function searchList(listOfElements) {
     // Declare variables
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("searchInput");
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('searchInput');
     filter = input.value.toUpperCase();
-    table = document.getElementById(listOfElements);
-    tr = table.getElementsByTagName("tr");
+    ul = document.getElementById(listOfElements);
+    li = ul.getElementsByTagName('li');
   
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("span")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
       }
     }
   }
-
-  home_search("employees-list");

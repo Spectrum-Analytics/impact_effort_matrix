@@ -63,7 +63,7 @@
 		</div>
 		<div class="pt-3">
 			<input type="text" placeholder="Type here to search for employees"
-				class="input-sm form-control" id="searchInput" onkeyup="home_search()">
+				class="input-sm form-control" id="searchInput" onkeyup="searchList('employees-list')">
 		</div>
 		<div id="employeesSpace">
 			<ul id="employees-list"></ul>
@@ -86,11 +86,11 @@
 						<input class="form-control item" type="text" name="name" placeholder="Employee name">
 					</div>
 					<div class="form-group">
-						<textarea name="description" class="form-control item" placeholder="Project description"></textarea>
+						<input class="form-control item" type="email" name="email" placeholder="Employee email">
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="red_button" data-dismiss="modal">Close</button>
-						<button type="submit" class="modal_green_button">Create</button>    
+						<button type="submit" class="modal_green_button">Add</button>    
 					</div>
 				</form>
 			</div>
