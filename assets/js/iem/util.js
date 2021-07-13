@@ -1,30 +1,19 @@
-/* /* /*
+/*
 This document holds utility functions
 */
  
- const projectList = document.querySelector('#project-details');
+const projectDetails= document.querySelector('#project-details');
 
-//create element and render cafe
- function renderCafe(doc){
-  let li = document.createElement('li');
-  let description = document.createElement('span');
+function DisplayProjectName(projectName){
   let name = document.createElement('span');
-  let status = document.createElement('div');
 
+  name.textContent= projectName;
 
-  li.setAttribute('data-id', doc.id);
-  description.textContent= doc.data().description;
-  name.textContent= doc.data().name;
-  status.textContent= doc.data().status;
- 
-  //li.appendChild(description);
-  li.appendChild(name);
-  //li.appendChild(status);
-
-  projectList.appendChild(li);
+  projectDetails.prepend(name);
 
 }
-function parse_query_string(query) {
+
+function getSelectedProjectName(query) {
     var vars = query.split("&");
     var query_string = {};
     for (var i = 0; i < vars.length; i++) {
@@ -48,43 +37,7 @@ function parse_query_string(query) {
 
 //project name
 var query = window.location.search.substring(1);
-var qs = parse_query_string(query);
+var qs = getSelectedProjectName(query);
 console.log(qs);
 
-//getting data
-  db.collection('Project').where('name', '==', qs.name).get().then((snapshot) =>{
-snapshot.docs.forEach(doc => {
-   renderCafe(doc);
-   })
-});  
-
-//saving data
-/* form.addEventListener('submit', (e) =>{
-    e.preventDefault();
-    db.collection('Project').add({
-       // description: form.description.value,
-        name: form.name.value,
-        //status: form.status.value
-
-    });
-   // form.description.value='';
-    form.name.value='';
-    //form.status.value='';
-
-});
- */
-                         //rel-time listener
-/* db.collection('Project').orderBy('name').onSnapshot(snapshot => {
-    let changes = snapshot.docChanges();
-    changes.forEach(change =>{
-        if(change.type == 'added'){
-            renderCafe(change.doc);
-        }
-        else if (change.type == 'removed'){
-            let li = cafeList.querySelector('[data-id' + change.doc.id + ']');
-            cafeList.removeChild(li);
-        }
-
-    })
-})  */
-
+DisplayProjectName(qs.name); 

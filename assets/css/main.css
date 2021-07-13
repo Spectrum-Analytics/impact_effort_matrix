@@ -151,7 +151,7 @@ input[type="file"]{
 
 /*footer*/
 .my-footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: #010351;
     width: 100%;

@@ -7,13 +7,13 @@
     width: 0;
     background: transparent;
 }
+
 /*matrix*/
 .container-matrix{
     width: 100%;
     height: 70%;
     position: relative;
 }
-
 .matrix{
     position:absolute;
     width: 68%;
@@ -140,10 +140,24 @@
     margin: 5px 15;
     list-style-type: none;
 }
+#feature-tip{
+    margin: 10px;
+    font-size: small;
+    opacity: 50%;
+}
 
+.my-feature-content{
+    display: inline-block;
+    padding: 5px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1acc8d;
+    border: none;
+}
 /*footer*/
 .my-footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: #010351;
     width: 100%;
@@ -170,21 +184,7 @@
     background: #1acc8d;
     border: none;
 }
-#feature-tip{
-    margin: 10px;
-    font-size: small;
-    opacity: 50%;
-}
 
-.my-feature-content{
-    display: inline-block;
-    padding: 5px 30px;
-    border-radius: 50px;
-    transition: 0.5s;
-    color: #fff;
-    background: #1acc8d;
-    border: none;
-}
 /*red button*/
 .red_button {
     font-family: "Montserrat", sans-serif;
@@ -199,21 +199,19 @@
     background: #be0000;
     border: none;
 }
-.project-details {
-    padding: 0;
-    font-size: 18px;
- 
-  }
-  .project-details ul {
-    right: 10;
-    margin: 2;
-    padding: 0;
+
+/*Project details */
+#project-details {
     display: flex;
-    list-style: none;
-  }
-
-  .project-details li {
-    position: relative;
-  }
-
+    align-items: baseline;
+}
+#project-details>button {
+    margin-left: auto;
+    padding: 5px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1acc8d;
+    border: none;
+}
       
