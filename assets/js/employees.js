@@ -3,31 +3,45 @@ const addEmployeesForm = document.querySelector('#add-employee-form');
 function renderemployees(doc) {
     let li = document.createElement('li');
     let employeeName = document.createElement('span');
-    let cross = document.createElement('div');
+    let deleteEmployee = document.createElement('button');
+    let profile = document.createElement('button');
+    let buttons = document.createElement('div');
 
     //li.setAttribute('data-id',doc.id);
     li.id = doc.id;
     li.classList.add('employee');
     employeeName.textContent = doc.data().name;
-    //cross.textContent = 'x';
-    cross.id = "cross";
-    cross.classList.add("bi", "bi-trash");
+    //deleteEmployee.textContent = 'x';
+    //deleteEmployee.id = "cross";
+    deleteEmployee.classList.add("bi", "bi-trash");
 
+    profile.classList.add("bi", "bi-person-lines-fill");
+    buttons.classList.add("buttons");
+    buttons.appendChild(profile);
+    buttons.appendChild(deleteEmployee);
     li.appendChild(employeeName);
-    li.appendChild(cross);
+    //li.appendChild(deleteEmployee);
+    li.appendChild(buttons);
 
     employeesList.appendChild(li);
 
     //deleting data from firestore.
-    cross.addEventListener('click',(e)=>{
+    deleteEmployee.addEventListener('click',(e)=>{
         e.stopPropagation();
-        let id = e.target.parentElement.id;
+        let employeeId = e.target.parentElement;
+        let id = employeeId.parentElement.id;
         db.collection('User').doc(id).delete();
     });
+
+    profile.addEventListener('click',(e)=>{
+        e.stopPropagation();
+        //let employeeId = e.target.parentElement;
+        //let id = employeeId.parentElement.id;
+        //db.collection('User').doc(id).delete();
+        location.href = "viewUserProfile.html";
+    });
 }
-function create(params) {
-    
-}
+
 // add data to firestore.
 addEmployeesForm.addEventListener(
     'submit',(e)=>{

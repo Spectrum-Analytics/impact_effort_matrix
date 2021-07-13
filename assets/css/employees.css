@@ -13,14 +13,19 @@
     padding: 15px 20px;
     align-items: baseline;
 }
-
+.buttons{
+    margin-left: auto;
+}
+.buttons > button{
+    margin: 5px;
+    color: white;
+    border: none;
+    background: none;
+}
 #name{
     margin: auto;
 }
 
-#cross{
-    margin-left: auto;
-}
 .hero{
     display: flex;
     width: 100%;
