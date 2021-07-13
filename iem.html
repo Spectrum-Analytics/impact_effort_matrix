@@ -44,13 +44,13 @@
     </header>
     <!-- End Header -->
 
-    <main class="h-100 d-flex justify-content-center align-items-center mt-2"> 
+    <main class="h-100 d-flex justify-content-center align-items-center pt-1"> 
         <div class="container">
             <div id="project-details">
-                <a class="btn btn-xs" href="project.html"><i  class="bi-person-plus-fill"></i></a>
+                <button class="bi-person-plus-fill"></button>
             </div>
     
-            <div class="container-matrix">
+            <div class="container-matrix pt-1">
     
                 <div class="matrix">
                     <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -70,43 +70,40 @@
                     <div class="feature-head">
                         <h2>Features</h2> 
                     </div>
-                    <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList">
-    
-                    </div>
+                    <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList"></div>
                     <div class="feature-bottom">
-                        <div>
-                            <button type="button" id="add-feature-button" data-toggle="modal" data-target="#addFeatureModal" class="green_button">Add feature</button>
-                            <!-- add feature modal-->
-                            <div class="modal fade" id="addFeatureModal" tabindex="-1" role="dialog" aria-labelledby="addFeatureModalTitle" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLongTitle">Add Feature</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form id="add-feature-form">
-                                                <div class="form-group">
-                                                    <textarea name="content" class="form-control" placeholder="Feature"></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <button class="red_button" data-dismiss="modal">Close</button>
-                                                    <button class="green_button" role="button">Add</button>
-                                                </div>
-                                            </form>
-                                        </div>
+                        <button type="button" id="add-feature-button" data-toggle="modal" data-target="#addFeatureModal" class="green_button">Add feature</button>
+                        <!-- add feature modal-->
+                        <div class="modal fade" id="addFeatureModal" tabindex="-1" role="dialog" aria-labelledby="addFeatureModalTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Add Feature</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="add-feature-form">
+                                            <div class="form-group">
+                                                <textarea name="content" class="form-control" placeholder="Feature"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="red_button" data-dismiss="modal">Close</button>
+                                                <button class="green_button" role="button">Add</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-     <footer class="my-footer d-flex justify-content-center align-items-center">
+    <footer class="my-footer d-flex justify-content-center align-items-center">
         <div class="credits">
             Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
         </div>
@@ -118,18 +115,6 @@
     <script src="assets/js/iem/util.js"></script>
     <script src="assets/js/iem/expand_quadrants.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
-    
-	<script src="assets/js/jquery.min.js"></script>
 </body>
 
 </html>
