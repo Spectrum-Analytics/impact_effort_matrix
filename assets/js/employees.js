@@ -25,7 +25,9 @@ function renderemployees(doc) {
         db.collection('User').doc(id).delete();
     });
 }
-
+function create(params) {
+    
+}
 // add data to firestore.
 addEmployeesForm.addEventListener(
     'submit',(e)=>{
