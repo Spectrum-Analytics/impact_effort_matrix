@@ -20,6 +20,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/employees.css">
 	<!-- Vendor CSS Files -->
 	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
 	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +46,7 @@
 
 			<nav id="navbar" class="navbar">
 				<ul>
-				<li><a class="nav-link scrollto" href="home.html">Home</a></li>
+				<li><a class="nav-link scrollto" href="home.html">Projects</a></li>
 				<li><a class="nav-link scrollto active" href="employees.html">Employees</a></li>
 				<li><a class="nav-link scrollto" href="viewUserProfile.html">User Profile</a></li>
 				<li><a class="nav-link scrollto" href="viewOrganisationProfile.html">Company Profile</a></li>
@@ -64,63 +65,9 @@
 			<input type="text" placeholder="Type here to search for employees"
 				class="input-sm form-control" id="searchInput" onkeyup="home_search()">
 		</div>
-		<table class="table table-hover p-table container mt-4" id="listOfProjects">
-			<thead>
-				<tr class="header">
-					<th>Employee Name</th>
-					<th>Custom</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="p-name">
-						<a href="viewUserProfile.html">Thor Odin</a>
-						<br>
-						<small>Added on 25.06.2021</small>
-					</td>
-					<td>
-						<a href="#" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="#" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td class="p-name">
-						<a href="viewUserProfile.html">Loki Odin</a>
-						<br>
-						<small>Added on 25.06.2021</small>
-					</td>
-
-					<td>
-						<a href="#" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i> </a>
-						<a href="#" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td class="p-name">
-						<a href="viewUserProfile.html">Steve Roders</a>
-						<br>
-						<small>Added on 25.06.2021</small>
-					</td>
-
-					<td>
-						<a href="project" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="project" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
-				<tr>
-					<td class="p-name">
-						<a href="viewUserProfile.html">Bruce Banner</a>
-						<br>
-						<small>Added on 25.06.2021</small>
-					</td>
-
-					<td>
-						<a href="#" class="btn btn-info btn-xs"><i class="bi bi-pencil-square"></i></a>
-						<a href="#" class="btn btn-danger btn-xs"><i class="bi bi-trash"></i></a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<div id="employeesSpace">
+			<ul id="employees-list"></ul>
+		</div>
 	</main>
 
 
@@ -134,16 +81,18 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<div style="margin: 10px;">
-					<input type="text" class="form-control" id="employeeName" placeholder="Employee name">
-				</div>
-				<div style="margin: 10px;">
-					<input type="text" class="form-control" id="employeeEmail" placeholder="Employee email">
-				</div>
-			</div>
-			<div class="modal-footer">
-                <button class="red_button" data-dismiss="modal">Cancel</button>
-				<a href="#"><button type="button" class="modal_green_button">Add</button></a>
+				<form id="add-employee-form">
+					<div class="form-group">
+						<input class="form-control item" type="text" name="name" placeholder="Employee name">
+					</div>
+					<div class="form-group">
+						<textarea name="description" class="form-control item" placeholder="Project description"></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="red_button" data-dismiss="modal">Close</button>
+						<button type="submit" class="modal_green_button">Create</button>    
+					</div>
+				</form>
 			</div>
 			</div>
 		</div>
@@ -164,12 +113,11 @@
 	<script src="assets/vendor/purecounter/purecounter.js"></script>
 	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 	<script src="assets/js/firebaseConfig.js"></script>
+	<script src="assets/js/employees.js"></script>
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
 	<!--Home scripts-->
 	<script src="assets/js/home_search.js"></script>
-
-	<script src="assets/js/home.js"></script>
 
 </body>
 

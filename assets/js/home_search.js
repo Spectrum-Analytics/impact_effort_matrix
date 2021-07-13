@@ -1,9 +1,9 @@
-function home_search() {
+function home_search(listOfElements) {
     // Declare variables
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("searchInput");
     filter = input.value.toUpperCase();
-    table = document.getElementById("listOfProjects");
+    table = document.getElementById(listOfElements);
     tr = table.getElementsByTagName("tr");
   
     // Loop through all table rows, and hide those who don't match the search query
@@ -19,3 +19,5 @@ function home_search() {
       }
     }
   }
+
+  home_search("employees-list");
