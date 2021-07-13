@@ -51,9 +51,15 @@
     </header>
     <!-- End Header -->
     <main class="h-100 d-flex justify-content-center align-items-center"> 
-
+        
          <div class="container container-matrix">
- 
+
+            <div class=" container project-details">
+                <ul id="project-details">
+                    <li><a class="btn btn-primary btn-xs" href="project.html"><i  class="bi bi-person-plus-fill"></i></a></li>
+                </ul>
+             </div>
+
             <div class="matrix">
                 <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <p class="quad-heading">High Impact/Low Effort</p>
@@ -116,6 +122,7 @@
     <script src="assets/js/firebaseConfig.js"></script>
     <script src="assets/js/iem/features.js"></script>
     <script src="assets/js/iem/drag_and_drop.js"></script>
+    <script src="assets/js/iem/util.js"></script>
     <script src="assets/js/iem/expand_quadrants.js"></script>
 
     <!-- Vendor JS Files -->
@@ -128,6 +135,9 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/home.js"></script>
+    
+	<script src="assets/js/jquery.min.js"></script>
 </body>
 
 </html>

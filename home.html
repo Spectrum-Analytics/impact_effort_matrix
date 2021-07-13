@@ -65,7 +65,7 @@
 			<input type="text" placeholder="Type here to search for projects"
 				class="input-sm form-control" id="searchInput" onkeyup="home_search()">
 		</div>
-		<table class="table table-hover p-table container mt-4" id="listOfProjects">
+		<table id="table" class="table table-hover p-table container mt-4" id="listOfProjects">
 			<thead>
 				<tr class="header">
 					<th>Project Name</th>
@@ -74,8 +74,10 @@
 					<th>Custom</th>
 				</tr>
 			</thead>
-			<tbody id="project-list">
+
+			<tbody id="project-list" class="projectlist">
 			</tbody>
+
 		</table>
 	</main>
 
@@ -100,6 +102,7 @@
 						<div class="form-group">
 							<textarea name="description" class="form-control item" placeholder="Project description"></textarea>
 						</div>
+
 						<div class="modal-footer">
 							<button type="button" class="red_button" data-dismiss="modal">Close</button>
 							<button type="submit" class="modal_green_button">Create</button>    
@@ -132,6 +135,10 @@
 	<script src="assets/js/home_search.js"></script>
 
 	<script src="assets/js/home.js"></script>
+	
+	<script src="assets/js/jquery.min.js"></script>
+
+	<script src="assets/js/iem/util.js"></script>
 
 </body>
 
