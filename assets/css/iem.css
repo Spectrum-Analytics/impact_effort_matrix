@@ -7,20 +7,22 @@
     width: 0;
     background: transparent;
 }
+
 /*matrix*/
 .container-matrix{
     width: 100%;
     height: 70%;
-    position: absolute;
-    overflow: hidden;
+    position: relative;
 }
 .matrix{
-    position: absolute;
+    position:absolute;
     width: 68%;
     height: 100%;
     left: 0;
+
 }
 .quadrant{
+    padding:0;
     border-radius: 10px;
     width: 49%;
     height: 49%;
@@ -51,6 +53,7 @@
     background-color: #00cd8b;
     top: 0;
     left: 0;
+   
 }
 .quadrant-2{
     background-color: #35adc2;
@@ -66,6 +69,7 @@
     background-color: #17bfa3;
     bottom: 0;
     right: 0;
+   
 }
 
 /*Expand quadrant screen*/
@@ -143,6 +147,7 @@
     font-size: small;
     opacity: 50%;
 }
+
 /* 
 .my-feature-content{
     display: inline-block;
@@ -164,10 +169,11 @@
 }
 .featureContent{
     overflow-y: scroll;
+
 }
 /*footer*/
 .my-footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: #010351;
     width: 100%;
@@ -206,6 +212,21 @@
     transition: 0.5s;
     color: #fff;
     background: #be0000;
+    border: none;
+}
+
+/*Project details */
+#project-details {
+    display: flex;
+    align-items: baseline;
+}
+#project-details>button {
+    margin-left: auto;
+    padding: 5px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1acc8d;
     border: none;
 }
 

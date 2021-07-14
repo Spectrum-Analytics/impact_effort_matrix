@@ -10,19 +10,12 @@
 
     <!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/iem.css">
 
@@ -50,33 +43,35 @@
         </div>
     </header>
     <!-- End Header -->
-    <main class="h-100 d-flex justify-content-center align-items-center"> 
 
-         <div class="container container-matrix">
- 
-            <div class="matrix">
-                <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">High Impact/Low Effort</p>
-                </div>
-                <div id="quad2" class="quadrant-2 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">High Impact/High Effort</p>
-                </div>
-                <div id="quad3" class="quadrant-3 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">Low Impact/Low Effort</p>
-                </div>
-                <div id="quad4" class="quadrant-4 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <p class="quad-heading">High Effort/ Low Impact</p>
-                </div>
+    <main class="h-100 d-flex justify-content-center align-items-center pt-1"> 
+        <div class="container">
+            <div id="project-details">
+                <button class="bi-person-plus-fill"></button>
             </div>
-            <div class="features">
-                <div class="feature-head">
-                    <h2>Features</h2> 
+    
+            <div class="container-matrix pt-1">
+    
+                <div class="matrix">
+                    <div id="quad1" class="quadrant-1 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">High Impact/Low Effort</p>
+                    </div>
+                    <div id="quad2" class="quadrant-2 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">High Impact/High Effort</p>
+                    </div>
+                    <div id="quad3" class="quadrant-3 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">Low Impact/Low Effort</p>
+                    </div>
+                    <div id="quad4" class="quadrant-4 quadrant" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <p class="quad-heading">High Effort/ Low Impact</p>
+                    </div>
                 </div>
-                <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList">
-
-                </div>
-                <div class="feature-bottom">
-                    <div>
+                <div class="features">
+                    <div class="feature-head">
+                        <h2>Features</h2> 
+                    </div>
+                    <div class="feature-body" ondrop="drop(event)" ondragover="allowDrop(event)" id="featuresList"></div>
+                    <div class="feature-bottom">
                         <button type="button" id="add-feature-button" data-toggle="modal" data-target="#addFeatureModal" class="green_button">Add feature</button>
                         <!-- add feature modal-->
                         <div class="modal fade" id="addFeatureModal" tabindex="-1" role="dialog" aria-labelledby="addFeatureModalTitle" aria-hidden="true">
@@ -102,12 +97,13 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-     <footer class="my-footer d-flex justify-content-center align-items-center">
+    <footer class="my-footer d-flex justify-content-center align-items-center">
         <div class="credits">
             Designed by <a href="https://www.spectrumcs.co.bw/">Spectrum Analytics</a>
         </div>
@@ -116,18 +112,9 @@
     <script src="assets/js/firebaseConfig.js"></script>
     <script src="assets/js/iem/features.js"></script>
     <script src="assets/js/iem/drag_and_drop.js"></script>
+    <script src="assets/js/iem/util.js"></script>
     <script src="assets/js/iem/expand_quadrants.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
