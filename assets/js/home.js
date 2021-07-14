@@ -10,14 +10,10 @@ function renderProject(doc){
     let custom = document.createElement('td');
     let a = document.createElement('a');
 
-    let iProfile = document.createElement('i');
-    let aProfile = document.createElement('a');
 
-    let iEdit = document.createElement('i');
-    let aEdit = document.createElement('a');
-
-    let iDelete = document.createElement('i');
-    let aDelete = document.createElement('a');
+    let aProfile = makeProfileIcon();
+    let aEdit = makeEditIcon();
+    let aDelete = makeDeleteIcon();
    
 
     tr.setAttribute('data-id', doc.id);
@@ -25,25 +21,6 @@ function renderProject(doc){
     a.innerHTML = doc.data().name;
     description.innerHTML = doc.data().description;
     status.innerHTML = doc.data().status;
-
-    aProfile.href = "project.html";
-    aProfile.style.margin = "2px";
-    aProfile.className = "btn btn-primary btn-xs";
-    iProfile.className = "bi bi-person-plus-fill";
-
-    aEdit.href = "project.html";
-    aEdit.style.margin = "2px";
-    aEdit.className = "btn btn-info btn-xs";
-    iEdit.className = "bi bi-pencil-square";
-
-    aDelete.href = "project.html";
-    aDelete.style.margin = "2px";
-    aDelete.className = "btn btn-danger btn-xs";
-    iDelete.className = "bi bi-trash";
-
-    aProfile.appendChild(iProfile);
-    aEdit.appendChild(iEdit);
-    aDelete.appendChild(iDelete);
 
     custom.appendChild(aProfile);
     custom.appendChild(aEdit);
@@ -58,22 +35,56 @@ function renderProject(doc){
 
     projectList.appendChild(tr);
 
-
     // deleting data
-    // cross.addEventListener('click', (e) => {
+    // tr.addEventListener('click', (e) => {
     //     e.stopPropagation();
     //     let id = e.target.parentElement.getAttribute('data-id');
     //     db.collection('Project').doc(id).delete();
     // });
 }
 
-//getting data
-// db.collection('Project').orderBy('name').get().then(snapshot => {
-//     snapshot.docs.forEach(doc => {
-//         renderProject(doc);
-//     });
-// });
+function makeProfileIcon(){
+    let iProfile = document.createElement('i');
+    let aProfile = document.createElement('a');
 
+    aProfile.href = "project.html";
+    aProfile.style.margin = "2px";
+    aProfile.className = "btn btn-primary btn-xs";
+    iProfile.className = "bi bi-person-plus-fill";
+
+    aProfile.appendChild(iProfile);
+
+    return aProfile;
+}
+
+function makeEditIcon(){
+    let iEdit = document.createElement('i');
+    let aEdit = document.createElement('a');
+
+    aEdit.href = "project.html";
+    aEdit.style.margin = "2px";
+    aEdit.className = "btn btn-info btn-xs";
+    iEdit.className = "bi bi-pencil-square";
+   
+    aEdit.appendChild(iEdit);
+
+    return aEdit;
+
+}
+
+function makeDeleteIcon(){
+    let iDelete = document.createElement('i');
+    let aDelete = document.createElement('a');
+
+    aDelete.style.margin = "2px";
+    aDelete.className = "btn btn-danger btn-xs";
+    iDelete.className = "bi bi-trash";
+
+    aDelete.appendChild(iDelete);
+
+    return aDelete;
+
+}
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -94,8 +105,8 @@ db.collection('Project').orderBy('name').onSnapshot(snapshot => {
         if(change.type == 'added'){
             renderProject(change.doc);
         } else if (change.type == 'removed'){
-            let li = projectList.querySelector('[data-id=' + change.doc.id + ']');
-            projectList.removeChild(li);
+            let project = projectList.querySelector('[data-id=' + change.doc.id + ']');
+            projectList.removeChild(project);
         }
     });
 });
