@@ -14,38 +14,43 @@ function renderFeatures(doc) {
 
     let feature = makeFeature(doc);
     let featureContent = document.createElement('span');
+
+    let div = document.createElement('div');
+    div.className = "featureButtons";
     
     //get quadrant id.
     let quadId = getFeature(doc).quadId;
 
-    let cross = makeCross();
+    let deleteFeature = makeDelete();
 
-    let edit = makeUpdate();
+    let updateFeature = makeUpdate();
 
     //getting the content.
     featureContent.textContent = getFeature(doc).featureContent;
 
-    // feature.textContent = doc.data().content;
+    div.appendChild(updateFeature);
+    div.appendChild(deleteFeature);
+
 
     pushFeatureToQuads(quadId,feature);
     //add feature content to feature div
     feature.appendChild(featureContent);
 
-    feature.appendChild(edit);
-    //add cross to feature div
-
-    feature.appendChild(cross);
+    //add delete and update icons to feature div
+    feature.appendChild(div);
 
     // deleting data
-    cross.addEventListener('click', (e) => {
+    deleteFeature.addEventListener('click', (e) => {
         e.stopPropagation();
-        let id = e.target.parentElement.getAttribute('data-id');
+        let featureId = e.target.parentElement;
+        let id = featureId.parentElement.id;
         db.collection('Feature').doc(id).delete();
     });
 
-    edit.addEventListener('click', (e) => {
+    updateFeature.addEventListener('click', (e) => {
         e.stopPropagation();
-        let id = e.target.parentElement.getAttribute('data-id');
+        let featureId = e.target.parentElement;
+        let id = featureId.parentElement.id;
         var newData = document.getElementById(id).childNodes[0].textContent;
         db.collection('Feature').doc(id).update({content: newData});
     });
@@ -100,12 +105,12 @@ function makeFeature(doc) {
     return feature;
 }
 
-function makeCross(){
-    let cross = document.createElement('div');
-    cross.contentEditable = "false";
-    cross.textContent = 'x';
+function makeDelete(){
+    let deleteFeature = document.createElement('i');
+    deleteFeature.className = "bi bi-trash";
+    deleteFeature.contentEditable = "false";
 
-    return cross;
+    return deleteFeature;
 }
 
 function makeUpdate(){

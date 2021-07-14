@@ -36,18 +36,18 @@ function renderProject(doc){
     projectList.appendChild(tr);
 
     // deleting data
-    aDelete.addEventListener('click', (e) => {
-        e.stopPropagation();
-        let id = e.target.parentElement.getAttribute('data-id');
-        db.collection('Project').doc(id).delete();
-    });
+    // tr.addEventListener('click', (e) => {
+    //     e.stopPropagation();
+    //     let id = e.target.parentElement.getAttribute('data-id');
+    //     db.collection('Project').doc(id).delete();
+    // });
 }
 
 function makeProfileIcon(){
     let iProfile = document.createElement('i');
     let aProfile = document.createElement('a');
 
-    aProfile.href = "project.html#participants";
+    aProfile.href = "project.html";
     aProfile.style.margin = "2px";
     aProfile.className = "btn btn-primary btn-xs";
     iProfile.className = "bi bi-person-plus-fill";
@@ -76,7 +76,6 @@ function makeDeleteIcon(){
     let iDelete = document.createElement('i');
     let aDelete = document.createElement('a');
 
-    aDelete.href = "project.html#delete"
     aDelete.style.margin = "2px";
     aDelete.className = "btn btn-danger btn-xs";
     iDelete.className = "bi bi-trash";

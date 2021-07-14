@@ -4,6 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+	<script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+
 	<!-- Google Fonts -->
 	<link
 		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -27,6 +32,8 @@
 	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<script src="assets/js/firebaseConfig.js"></script>
+	<script src="assets/js/home.js"></script>
 	<link href="assets/css/style.css" rel="stylesheet">
 
 	<title>Profile | Project</title>
@@ -90,23 +97,16 @@
 						<div class="tab-pane active" id="project">
 							<h6>PROJECT INFORMATION</h6>
 							<hr>
-							<form>
+							<form id="project-details">
 								<div class="form-group">
 									<label for="projectName">Project Name</label>
 									<input type="text" class="form-control" id="projectName"
-										aria-describedby="projectName" placeholder="Project Name" value="IEM">
-									<small id="fullNameHelp" class="form-text text-muted">The project name may appear
-										around here where
-										you are mentioned. You can change or remove it at any time.</small>
+										aria-describedby="projectName">
 								</div>
 								<div class="form-group">
-									<label for="projectDes">Project Description</label>
-									<textarea type="text" class="form-control" id="projectDes"
-										aria-describedby="projectDes" placeholder="Project Description"
-										value="Impact Effort Matrix"></textarea>
-									<small id="projectDes" class="form-text text-muted">The description may appear
-										around here where you
-										are mentioned. You can change or remove it at any time.</small>
+									<label for="projectDescription">Project Description</label>
+									<textarea type="text" class="form-control" id="projectDescription"
+										aria-describedby="projectDescription"></textarea>
 								</div>
 								<button type="button" class="edit_green_button">Update Project</button>
 								<button type="reset" class="reset_red_button">Reset Changes</button>
