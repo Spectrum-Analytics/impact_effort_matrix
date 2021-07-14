@@ -13,10 +13,12 @@ const quad4 = document.querySelector('#quad4');// high effort|low effort.
 function renderFeatures(doc) {
 
     let feature = makeFeature(doc);
-    let featureContent = document.createElement('span');
+    let featureContent = document.createElement('div');
+    featureContent.contentEditable = "true";
 
     let div = document.createElement('div');
     div.className = "featureButtons";
+
     
     //get quadrant id.
     let quadId = getFeature(doc).quadId;
@@ -27,6 +29,7 @@ function renderFeatures(doc) {
 
     //getting the content.
     featureContent.textContent = getFeature(doc).featureContent;
+    featureContent.className = "featureContent";
 
     div.appendChild(updateFeature);
     div.appendChild(deleteFeature);
@@ -68,7 +71,6 @@ function getFeature(doc) {
 function setFeatureAttributes(feature,doc) {
     feature.id = doc.id;
     feature.classList.add('my-feature');
-    feature.contentEditable = "true";
     feature.setAttribute('data-id',doc.id);
 }
 
